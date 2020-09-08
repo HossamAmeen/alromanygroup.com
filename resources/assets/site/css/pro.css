@@ -1,0 +1,18 @@
+.progress {
+  width: 100%;
+  height: 40px;
+}
+
+.progress-wrap {
+  background: url(../images/loading-bar-bg.png) repeat;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+.progress-wrap .progress-bar {
+  background: #ddd;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
