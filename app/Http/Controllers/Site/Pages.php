@@ -26,7 +26,7 @@ class Pages extends Controller {
 
     public function home (){
         $pageTitle = "الرئيسية";
-        $offers = OffersModel::all();
+        $offers = OffersModel::where('active' , 1)->get();
         //$projects = ProjectModel::where('active','=','1')->orderBy('id','desc')->get();
         //$news = NewsModel::where('active','=','1')->orderBy('id','desc')->get();
         return view('site.home',compact('pageTitle','offers'));

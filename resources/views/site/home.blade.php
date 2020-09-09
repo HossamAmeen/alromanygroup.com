@@ -312,7 +312,7 @@
                                 </div>
                                 <!-- //item  -->
 
-                                @endforeach
+                            @endforeach
 
                             </div>
                         </div>
