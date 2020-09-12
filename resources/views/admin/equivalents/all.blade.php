@@ -42,7 +42,7 @@
 <!-- the fileinput plugin initialization -->
 <script> 
     $(document).ready(function(){
-        $('#clients').addClass('active');
+        $('#equivalents').addClass('active');
         $('#project-configration').addClass('active');
     });
     $("#img").fileinput({
@@ -79,22 +79,19 @@
     <div class="col-md-12">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">{{$pageTitle}}  <a  href="{{URL::to('admin/clients/create')}}"><button class="btn btn-xs btn-success" title="إضافة"><i class="fa fa-plus"></i></button></a>
+            <h3 class="panel-title">{{$pageTitle}}  <a  href="{{URL::to('admin/equivalents/create')}}"><button class="btn btn-xs btn-success" title="إضافة"><i class="fa fa-plus"></i></button></a>
             </h3>
         </div>
-
+       
              <div class="panel-body">
              <div class="table-responsive ls-table">
                                         <table class="table table-bordered table-striped">
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>اسم العميل</th>
-                                                <th>عنوان العميل</th>
-                                                <th>الهاتف</th>
-                                                <th>تخصص</th>
-                                                <th>خاص بالفني</th>
-
+                                                <th> فني</th>
+                                                <th>قيمة الصرف</th>
+                                                <th>تاريخ الصرف</th>
                                                 <th class="text-center">خيارات</th>
                                             </tr>
                                             </thead>
@@ -103,14 +100,12 @@
                                             @foreach($items as $index => $row)
                                             <tr>
                                                 <td>{{($index+1)}}</td>
-                                                <td>{{$row->name}}</td>
-                                                <td>{{$row->address}}</td>
-                                                <td>{{$row->phone}}</td>
-                                                <td>{{$row->job}}</td>
                                                 <td>{{$row->employee->name??" "}}</td>
+                                                <td>{{$row->value}}</td>
+                                                <td>{{$row->created_at}}</td>
                                                 <td class="text-center">
-                                                    <a  href="{{URL::to('admin/clients/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
-                                                    <a class="check" href="{{URL::to('admin/clients/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>
+                                                    <a  href="{{URL::to('admin/equivalents/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
+                                                    <a class="check" href="{{URL::to('admin/equivalents/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>
                                                 </td>
                                             </tr>
                                             @endforeach

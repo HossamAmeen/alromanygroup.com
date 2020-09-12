@@ -42,7 +42,7 @@
 <!-- the fileinput plugin initialization -->
 <script> 
     $(document).ready(function(){
-        $('#clients').addClass('active');
+        $('#projects2').addClass('active');
         $('#project-configration').addClass('active');
     });
     $("#img").fileinput({
@@ -79,7 +79,7 @@
     <div class="col-md-12">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title">{{$pageTitle}}  <a  href="{{URL::to('admin/clients/create')}}"><button class="btn btn-xs btn-success" title="إضافة"><i class="fa fa-plus"></i></button></a>
+            <h3 class="panel-title">{{$pageTitle}}  <a  href="{{URL::to('admin/projects/create')}}"><button class="btn btn-xs btn-success" title="إضافة"><i class="fa fa-plus"></i></button></a>
             </h3>
         </div>
 
@@ -89,10 +89,9 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>اسم العميل</th>
-                                                <th>عنوان العميل</th>
-                                                <th>الهاتف</th>
-                                                <th>تخصص</th>
+                                                <th>اسم المشروع</th>
+                                                <th>تفاصيل المشروع </th>
+                                                <th>نقاط المشروع</th>
                                                 <th>خاص بالفني</th>
 
                                                 <th class="text-center">خيارات</th>
@@ -104,13 +103,13 @@
                                             <tr>
                                                 <td>{{($index+1)}}</td>
                                                 <td>{{$row->name}}</td>
-                                                <td>{{$row->address}}</td>
-                                                <td>{{$row->phone}}</td>
-                                                <td>{{$row->job}}</td>
+                                                <td>{{$row->description}}</td>
+                                                <td>{{$row->point}}</td>
+                                                
                                                 <td>{{$row->employee->name??" "}}</td>
                                                 <td class="text-center">
-                                                    <a  href="{{URL::to('admin/clients/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
-                                                    <a class="check" href="{{URL::to('admin/clients/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>
+                                                    <a  href="{{URL::to('admin/projects/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
+                                                    <a class="check" href="{{URL::to('admin/projects/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>
                                                 </td>
                                             </tr>
                                             @endforeach

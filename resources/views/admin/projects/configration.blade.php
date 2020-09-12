@@ -73,28 +73,9 @@
 <!-- the fileinput plugin initialization -->
 <script>
     $(document).ready(function(){
-        $('#news').addClass('active');
+        $('#project-configration').addClass('active');
     });
-    $("#img").fileinput({
-        overwriteInitial: true,
-        maxFileSize: 3000,
-        showCaption: false,
-        showPreview: true,
-        showRemove: true,
-        showUpload: false, // <------ just set this from true to false
-        showCancel: true,
-        showUploadedThumbs: true,
-        browseLabel: '',
-        removeLabel: '',
-        browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
-        removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
-        removeTitle: 'Cancel or reset changes',
-        elErrorContainer: '#kv-avatar-errors',
-        msgErrorClass: 'alert alert-block alert-danger',
-        defaultPreviewContent: '<img src="{{URL::asset($item->img)}}" alt="Your Avatar" style="width:160px">',
-        layoutTemplates: {main2: '{preview} ' +   ' {remove} {browse}'},
-        allowedFileExtensions: ["jpg", "png", "gif"]
-    });
+
 
 
 
@@ -172,57 +153,31 @@
         </div>
 
         	 <div class="panel-body">
-        	 {!! Form::model( $item ,array('id'=>'newsForm','url'=>'admin/clients/'.$item->id,'method' => 'put', 'enctype'=> 'multipart/form-data') )!!}
+        	 {!! Form::model( $item ,array('id'=>'newsForm','url'=>'admin/project-configration','method' => 'post', 'enctype'=> 'multipart/form-data') )!!}
 
 
+             
              <div class="form-group col-md-6">
-                <label for="title">اسم العميل </label>
-                {!! Form::text($name = 'name', null, $attributes = array(
+                <label for="title">الحد الادني للسحب </label>
+                {!! Form::number($name = 'minimum', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'اسم العميل',
+                    'placeholder'=>'الحد الادني للسحب ',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label for="title">عنوان العميل </label>
-                {!! Form::text($name = 'address', null, $attributes = array(
+                <label for="title">نسبة الخصم </label>
+                {!! Form::number($name = 'pull_ratio', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'عنوان العميل',
+                    'placeholder'=>'نسبة الخصم ',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
-            <div class="form-group col-md-6">
-                <label >هاتف العميل </label>
-                {!! Form::number($name = 'phone', null, $attributes = array(
-                    
-                    'class'=>'form-control',
-                    'placeholder'=>'هاتف العميل',
-                    'required'=>'required',
-                    'max-length'=>'99'
-                )) !!}
-            </div>
-            <div class="form-group col-md-6">
-                <label >تخصص العميل </label>
-                {!! Form::text($name = 'job', null, $attributes = array(
-                    
-                    'class'=>'form-control',
-                    'placeholder'=>'تخصص العميل',
-                    'required'=>'required',
-                    'max-length'=>'99'
-                )) !!}
-            </div>
-            <div class="form-group col-md-6">
-                <label for="content">اختر  فني</label>
-                {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
-                         'id'=>'project_id',
-                         'class'=>' form-control ',
-                         'required'=>'required',
-             )) !!}
-            </div>
+           
          
 
                  <input type="submit" class="col-md-offset-3 col-md-6 btn btn-success" value="حفظ التعديلات" />

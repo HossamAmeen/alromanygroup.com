@@ -16,7 +16,8 @@ class CheckAdmin
 	public function handle($request, Closure $next)
 	{
 		if (!UserModel::isManger()) {
-			return redirect('/admin');
+			// return redirect('/admin');
+			return redirect()->route('loginAdmin');
 		} else {
 			return $next($request);
 		}

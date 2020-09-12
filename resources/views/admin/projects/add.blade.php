@@ -165,53 +165,44 @@
                 @include('admin._masters/validation_errors')
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">إضافة عميل جديد</h3>
+                    <h3 class="panel-title">إضافة مشروع جديد</h3>
                 </div>
 
                 <div class="panel-body">
-                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/clients',  'enctype'=> 'multipart/form-data'  ))!!}
+                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/projects',  'enctype'=> 'multipart/form-data'  ))!!}
 
 
                     <div class="form-group col-md-6">
-                        <label for="title">اسم العميل </label>
+                        <label for="title">اسم المشروع </label>
                         {!! Form::text($name = 'name', null, $attributes = array(
                             'id'=>'title',
                             'class'=>'form-control',
-                            'placeholder'=>'اسم العميل',
+                            'placeholder'=>'اسم المشروع',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="title">عنوان العميل </label>
-                        {!! Form::text($name = 'address', null, $attributes = array(
+                        <label for="title">وصف المشروع  </label>
+                        {!! Form::text($name = 'description', null, $attributes = array(
                             'id'=>'title',
                             'class'=>'form-control',
-                            'placeholder'=>'عنوان العميل',
+                            'placeholder'=>'وصف المشروع',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
                     <div class="form-group col-md-6">
-                        <label >هاتف العميل </label>
-                        {!! Form::number($name = 'phone', null, $attributes = array(
+                        <label > نقاط المشروع</label>
+                        {!! Form::number($name = 'point', null, $attributes = array(
                             
                             'class'=>'form-control',
-                            'placeholder'=>'هاتف العميل',
+                            'placeholder'=>'نقاط المشروع',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
-                    <div class="form-group col-md-6">
-                        <label >تخصص العميل </label>
-                        {!! Form::text($name = 'job', null, $attributes = array(
-                            
-                            'class'=>'form-control',
-                            'placeholder'=>'تخصص العميل',
-                            'required'=>'required',
-                            'max-length'=>'99'
-                        )) !!}
-                    </div>
+                  
                     <div class="form-group col-md-6">
                         <label for="content">اختر  فني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(

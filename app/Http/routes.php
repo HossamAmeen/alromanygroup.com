@@ -36,7 +36,7 @@ Route::post('password/email','Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}','Auth\PasswordController@get_reset');
 Route::post('password/reset','Auth\PasswordController@postReset');
 
-Route::get('/admin', 'Admin\Account@login');
+Route::get('/admin', 'Admin\Account@login')->name('loginAdmin');
 
 Route::post('/admin', 'Admin\Account@post_login');
 Route::get('logout', 'Admin\Account@logout');
@@ -88,6 +88,21 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
     Route::get('admin/follows/{id}/delete', 'Admin\Follows@destroy');
     Route::get('admin/follows/{id}/update', 'Admin\Follows@edit');
     Route::put('admin/follows/{id}/update', 'Admin\Follows@update');
+        /////////////// employees
+    Route::resource('admin/employees', 'Admin\EmployeeController');
+    Route::get('admin/employees/{id}/delete', 'Admin\EmployeeController@destroy');
+        ////////////// clients
+    Route::resource('admin/clients', 'Admin\ClientController');
+    Route::get('admin/clients/{id}/delete', 'Admin\ClientController@destroy');
+
+        //////////// projects
+    Route::resource('admin/projects', 'Admin\ProjectController');
+    Route::get('admin/projects/{id}/delete', 'Admin\ProjectController@destroy');
+        ///////////////////// project
+    Route::any('admin/project-configration', 'Admin\ProjectController@configration');
+        //////////////////// Equivalent
+    Route::resource('admin/equivalents', 'Admin\EquivalentController');
+    Route::get('admin/equivalents/{id}/delete', 'Admin\EquivalentController@destroy');
 
     //Project routes
     Route::get('admin/offers', 'Admin\Offers@index');

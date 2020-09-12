@@ -172,56 +172,58 @@
         </div>
 
         	 <div class="panel-body">
-        	 {!! Form::model( $item ,array('id'=>'newsForm','url'=>'admin/clients/'.$item->id,'method' => 'put', 'enctype'=> 'multipart/form-data') )!!}
+        	 {!! Form::model( $item ,array('id'=>'newsForm','url'=>'admin/employees/'.$item->id,'method' => 'put', 'enctype'=> 'multipart/form-data') )!!}
 
 
              <div class="form-group col-md-6">
-                <label for="title">اسم العميل </label>
+                <label for="title">اسم الفني </label>
                 {!! Form::text($name = 'name', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'اسم العميل',
+                    'placeholder'=>'اسم الفني',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label for="title">عنوان العميل </label>
+                <label for="title">عنوان الفني </label>
                 {!! Form::text($name = 'address', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'عنوان العميل',
+                    'placeholder'=>'عنوان الفني',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label >هاتف العميل </label>
+                <label >هاتف الفني </label>
                 {!! Form::number($name = 'phone', null, $attributes = array(
                     
                     'class'=>'form-control',
-                    'placeholder'=>'هاتف العميل',
+                    'placeholder'=>'هاتف الفني',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label >تخصص العميل </label>
+                <label >تخصص الفني </label>
                 {!! Form::text($name = 'job', null, $attributes = array(
                     
                     'class'=>'form-control',
-                    'placeholder'=>'تخصص العميل',
+                    'placeholder'=>'تخصص الفني',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label for="content">اختر  فني</label>
-                {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
-                         'id'=>'project_id',
-                         'class'=>' form-control ',
-                         'required'=>'required',
-             )) !!}
+                <label for="title">مجموع نقاط الفني </label>
+                {!! Form::number($name = 'total_point', null, $attributes = array(
+                    'id'=>'title',
+                    'class'=>'form-control',
+                    'placeholder'=>'مجموع نقاط الفني',
+                    'required'=>'required',
+                    'max-length'=>'99'
+                )) !!}
             </div>
          
 

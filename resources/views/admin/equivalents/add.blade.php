@@ -165,53 +165,25 @@
                 @include('admin._masters/validation_errors')
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">إضافة عميل جديد</h3>
+                    <h3 class="panel-title">إضافة مشروع جديد</h3>
                 </div>
 
                 <div class="panel-body">
-                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/clients',  'enctype'=> 'multipart/form-data'  ))!!}
+                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/equivalents',  'enctype'=> 'multipart/form-data'  ))!!}
 
 
+                   
                     <div class="form-group col-md-6">
-                        <label for="title">اسم العميل </label>
-                        {!! Form::text($name = 'name', null, $attributes = array(
-                            'id'=>'title',
-                            'class'=>'form-control',
-                            'placeholder'=>'اسم العميل',
-                            'required'=>'required',
-                            'max-length'=>'99'
-                        )) !!}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="title">عنوان العميل </label>
-                        {!! Form::text($name = 'address', null, $attributes = array(
-                            'id'=>'title',
-                            'class'=>'form-control',
-                            'placeholder'=>'عنوان العميل',
-                            'required'=>'required',
-                            'max-length'=>'99'
-                        )) !!}
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label >هاتف العميل </label>
-                        {!! Form::number($name = 'phone', null, $attributes = array(
+                        <label > قيمة الصرف  </label>
+                        {!! Form::number($name = 'value', null, $attributes = array(
                             
                             'class'=>'form-control',
-                            'placeholder'=>'هاتف العميل',
+                            'placeholder'=>' قيمة الصرف ',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
-                    <div class="form-group col-md-6">
-                        <label >تخصص العميل </label>
-                        {!! Form::text($name = 'job', null, $attributes = array(
-                            
-                            'class'=>'form-control',
-                            'placeholder'=>'تخصص العميل',
-                            'required'=>'required',
-                            'max-length'=>'99'
-                        )) !!}
-                    </div>
+                  
                     <div class="form-group col-md-6">
                         <label for="content">اختر  فني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
