@@ -68,7 +68,7 @@
             </li>
 
             <li>
-                <a id="project-configration" href="#"> <i class="fa fa-suitcase"></i> <span>مشروع الوفاء</span></a>
+                <a id="project-configration" href="#"> <i class="fa fa-suitcase"></i> <span>برنامج الوفاء</span></a>
                 <ul>
                     <li><a href="{{URL::to('admin/project-configration')}}" id="project-configration"><span>اعدادات المشروع</span></a></li>
                     <li><a href="{{URL::to('admin/employees')}}" id="employees"><span>كل الفنيين</span></a></li>

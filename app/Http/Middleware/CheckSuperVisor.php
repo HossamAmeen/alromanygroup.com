@@ -16,6 +16,7 @@ class CheckSuperVisor
 	public function handle($request, Closure $next)
 	{
 		if (!UserModel::isSuperVisor()) {
+			// return redirect()->route('loginAdmin');
 			return redirect('/admin');
 		} else {
 			return $next($request);

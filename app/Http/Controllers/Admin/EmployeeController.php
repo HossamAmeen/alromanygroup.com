@@ -51,7 +51,7 @@ class EmployeeController extends Controller
        $item =  new Employee();
        $item->name =$request->name ;
        $item->job =$request->job ;
-       $item->total_point = $request->total_point;
+       $item->total_point =0;
        $item->phone = $request->phone;
        $item->address = $request->address;
        $item->user_id =  Auth::id();
