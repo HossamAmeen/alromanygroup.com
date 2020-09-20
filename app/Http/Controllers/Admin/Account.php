@@ -21,7 +21,7 @@ use View;
 class Account extends Controller {
 
 	public function login() {
-		return "test";
+		// return "test";
 		if (Auth::check()) {
 			return redirect('edit-profile');
 		}

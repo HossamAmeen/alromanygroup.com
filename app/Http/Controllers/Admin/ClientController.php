@@ -71,7 +71,10 @@ class ClientController extends Controller
         {
     
             $item = Client::findOrFail($id);
-            $items = Employee::where('active','=','1')->orderBy('id','desc')->get()->pluck('name','id')->toArray();
+            // $items = Employee::where('active','=','1')->orderBy('id','desc')->get()->pluck('name','id')->toArray();
+            $default = ['0'=>'اختر مشروع'];
+            $items = Employee::where('active','=','1')->pluck('name','id')->toArray();
+            $items = $default + $items;
             $pageTitle = "تعديل فني " . $item->name;
           
             return view('admin.clients.update', compact('item','items','pageTitle'));
