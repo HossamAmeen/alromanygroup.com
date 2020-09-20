@@ -104,7 +104,7 @@
                                                 <td>{{$row->value}}</td>
                                                 <td>{{$row->created_at}}</td>
                                                 <td class="text-center">
-                                                    <a  href="{{URL::to('admin/equivalents/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
+                                                    {{-- <a  href="{{URL::to('admin/equivalents/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a> --}}
                                                     <a class="check" href="{{URL::to('admin/equivalents/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>
                                                 </td>
                                             </tr>
