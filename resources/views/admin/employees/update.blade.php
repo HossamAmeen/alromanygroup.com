@@ -197,7 +197,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label >هاتف الفني </label>
-                {!! Form::number($name = 'phone', null, $attributes = array(
+                {!! Form::text($name = 'phone', null, $attributes = array(
                     
                     'class'=>'form-control',
                     'placeholder'=>'هاتف الفني',
