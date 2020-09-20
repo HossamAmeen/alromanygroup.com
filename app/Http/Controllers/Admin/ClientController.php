@@ -71,9 +71,10 @@ class ClientController extends Controller
         {
     
             $item = Client::findOrFail($id);
+            $items = Employee::where('active','=','1')->orderBy('id','desc')->get();
             $pageTitle = "تعديل فني " . $item->name;
           
-            return view('admin.clients.update', compact('item','pageTitle'));
+            return view('admin.clients.update', compact('item','items','pageTitle'));
         }
     
         /**
