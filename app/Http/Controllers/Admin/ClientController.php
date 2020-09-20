@@ -93,7 +93,8 @@ class ClientController extends Controller
             $item= Client::findOrFail($id);
             $item->name =$request->name ;
             $item->job =$request->job ;
-            $item->total_point = $request->total_point;
+            // $item->total_point = $request->total_point;
+            $item->employee_id = $request->employee_id;
             $item->phone = $request->phone;
             $item->address = $request->address;
             $item->user_id =  Auth::id();
