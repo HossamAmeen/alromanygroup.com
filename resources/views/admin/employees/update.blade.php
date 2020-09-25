@@ -215,7 +215,7 @@
                     'max-length'=>'99'
                 )) !!}
             </div>
-            <div class="form-group col-md-6">
+            {{-- <div class="form-group col-md-6">
                 <label for="title">مجموع نقاط الفني </label>
                 {!! Form::number($name = 'total_point', null, $attributes = array(
                     'id'=>'title',
@@ -224,7 +224,7 @@
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
-            </div>
+            </div> --}}
          
 
                  <input type="submit" class="col-md-offset-3 col-md-6 btn btn-success" value="حفظ التعديلات" />

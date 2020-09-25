@@ -17,7 +17,7 @@ class EquivalentController extends Controller
      */
     public function index()
     {
-        $items = Equivalent::where('active','=','1')->orderBy('id','desc')->get();
+        $items = Equivalent::where('active','=','1')->where('employee_id',request('employeeId') )->orderBy('id','desc')->get();
         $pageTitle = "صرف مكافئات";
         return view('admin.equivalents.all', compact('items','pageTitle'));
     }

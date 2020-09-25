@@ -93,8 +93,10 @@
                                                 <th>عنوان الفني</th>
                                                 <th>الهاتف</th>
                                                 <th>تخصص</th>
-                                                <th>مجموع النقاط</th>
-
+                                                <th>إجمالي البيعات</th>
+                                                <th>إجمالي النقاط</th>
+                                                <th>إجمالي المكافئات المصروفة</th>
+                                                <th>صرف المكافئة</th>
                                                 <th class="text-center">خيارات</th>
                                             </tr>
                                             </thead>
@@ -108,6 +110,12 @@
                                                 <td>{{$row->phone}}</td>
                                                 <td>{{$row->job}}</td>
                                                 <td>{{$row->total_point}}</td>
+                                                <td>{{$row->total_point}}</td>
+                                                <td>{{$row->disbursedRewards->sum('value') ?? " "}}</td>
+                                                <td class="text-center">
+                                                    <a  href="{{URL::to('admin/equivalents?employeeId='.$row->id)}}"><button class="btn btn-xs btn-warning" title="مكافئة">مكافئة</button></a>
+                                                    
+                                                </td>
                                                 <td class="text-center">
                                                     <a  href="{{URL::to('admin/employees/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
                                                     <a class="check" href="{{URL::to('admin/employees/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>

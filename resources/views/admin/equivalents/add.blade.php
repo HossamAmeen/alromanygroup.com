@@ -165,7 +165,7 @@
                 @include('admin._masters/validation_errors')
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">إضافة مشروع جديد</h3>
+                    <h3 class="panel-title">صرف مكافئة</h3>
                 </div>
 
                 <div class="panel-body">
@@ -184,14 +184,14 @@
                         )) !!}
                     </div>
                   
-                    <div class="form-group col-md-6">
+                    {{-- <div class="form-group col-md-6">
                         <label for="content">اختر  فني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
                                  'id'=>'project_id',
                                  'class'=>' form-control ',
                                  'required'=>'required',
                      )) !!}
-                    </div>
+                    </div> --}}
 
                  
 

@@ -149,7 +149,7 @@ class ProjectController extends Controller
             $item->save();
             return redirect()->back();
         }
-        $pageTitle = "تعديل اعدادت مشروع الافادة " ;
+        $pageTitle = "تعديل برنامج الوفاء" ;
         
         return view('admin.projects.configration', compact('item','pageTitle'));
     }

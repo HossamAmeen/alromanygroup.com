@@ -93,7 +93,7 @@
                                                 <th>عنوان العميل</th>
                                                 <th>الهاتف</th>
                                                 <th>تخصص</th>
-                                                <th>خاص بالفني</th>
+                                                {{-- <th>خاص بالفني</th> --}}
 
                                                 <th class="text-center">خيارات</th>
                                             </tr>
@@ -107,7 +107,7 @@
                                                 <td>{{$row->address}}</td>
                                                 <td>{{$row->phone}}</td>
                                                 <td>{{$row->job}}</td>
-                                                <td>{{$row->employee->name??" "}}</td>
+                                                {{-- <td>{{$row->employee->name??" "}}</td> --}}
                                                 <td class="text-center">
                                                     <a  href="{{URL::to('admin/clients/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
                                                     <a class="check" href="{{URL::to('admin/clients/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>

@@ -158,21 +158,21 @@
 
              
              <div class="form-group col-md-6">
-                <label for="title">الحد الادني للسحب </label>
+                <label for="title">الحد الأدنى لصرف مكافأة </label>
                 {!! Form::number($name = 'minimum', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'الحد الادني للسحب ',
+                    'placeholder'=>'الحد الأدنى لصرف مكافأة ',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label for="title">نسبة الخصم </label>
+                <label for="title">المكافأة بالنسبة المئوية</label>
                 {!! Form::number($name = 'pull_ratio', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'نسبة الخصم ',
+                    'placeholder'=>'المكافأة بالنسبة المئوية',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}
