@@ -118,11 +118,11 @@
                                     <div class="prefered">
                                         <a href="{{url::to('/offers/'.$lastOffer->id)}}">
                                             <img src="{{URL::asset($lastOffer->img)}}" class="center-block">
-                                            <h4>20% sale</h4>
+                                            <h4>20% sale </h4>
                                         </a>
                                     </div>
                                     <h3 class="text-center" style="color: #222;">{{$lastOffer->title}}</h3>
-                                    <p> {{($row->price)-($row->price)*($row->discount/100)}} جنية <span>{{$row->price}} جنية</span> </p>
+                                    <p> {{($lastOffer->price)-($lastOffer->price)*($lastOffer->discount/100)}} جنية <span>{{$lastOffer->price}} جنية</span> </p>
                                 </div>
                             </div>
                         </div>

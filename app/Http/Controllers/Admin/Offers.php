@@ -45,6 +45,7 @@ class Offers extends Controller {
         
 		$id = OffersModel::create_offer();
 		OffersImageModel::store_images($id);
+		
 		return redirect(OffersModel::get_projects_url());
 	}//end store
 

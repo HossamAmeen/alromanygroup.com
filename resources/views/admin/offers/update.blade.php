@@ -246,7 +246,7 @@
         </div>
 
         	 <div class="panel-body">
-        	 {!! Form::model( $mProject ,array('id'=>'projectForm','method' => 'put', 'enctype'=> 'multipart/form-data') )!!}
+        	 {!! Form::model( $mProject ,array('id'=>'projectForm','url'=>"admin/offers/$mProject->id/update",'method' => 'put', 'enctype'=> 'multipart/form-data') )!!}
 
 
                  <div class="form-group col-md-4">
