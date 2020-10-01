@@ -109,9 +109,9 @@
                                                 <td>{{$row->address}}</td>
                                                 <td>{{$row->phone}}</td>
                                                 <td>{{$row->job}}</td>
-                                                <td>{{$row->projects->sum('bill_value') ?? 0}}</td>
+                                                {{-- <td>{{$row->projects->sum('bill_value') ?? 0}}</td>
                                                 <td>{{$row->projects->sum('bill_value')??0 - $row->disbursedRewards->sum('value')??0}}</td>
-                                                <td>{{$row->disbursedRewards->sum('value') *  $configration->pull_ratio / 100  ?? " "}}</td>
+                                                <td>{{$row->disbursedRewards->sum('value') *  $configration->pull_ratio / 100  ?? " "}}</td> --}}
                                                 <td class="text-center">
                                                     <a  href="{{URL::to('admin/equivalents/create?employeeId='.$row->id)}}"><button class="btn btn-xs btn-warning" title="مكافئة">مكافئة</button></a>
                                                     
