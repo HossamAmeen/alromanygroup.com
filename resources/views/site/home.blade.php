@@ -472,7 +472,7 @@
                             <form action="" method="">
 --}}
                             {{Form::open(['id'=>'contact-form'])}}
-                            <div class="g-recaptcha" data-sitekey="6LfCsrMZAAAAAEMi62H0roxGgd8ueJV6FQC4zuxt"></div>
+                           
                             <div class="hide success-contact col-xs-12 alert alert-success">تم إرسال الرسالة بنجاح</div>
                             <div class="hide error-contact col-xs-12 alert alert-danger">هناك خطأ ما، رجاء المحاولة لاحقا</div>
 
@@ -488,6 +488,7 @@
                                 <div class="col-sm-12 wow bounceInLeft">
                                     <textarea name="msg" id="msg" placeholder="الرسالة*" required="required"></textarea>
                                 </div>
+                                <div class="g-recaptcha" data-sitekey="6LfCsrMZAAAAAEMi62H0roxGgd8ueJV6FQC4zuxt"></div>
                                 <div class="col-sm-12 wow bounceInDown">
                                     <input type="submit" value="إرسل">
                                 </div>
