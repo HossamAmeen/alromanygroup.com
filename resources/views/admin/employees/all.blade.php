@@ -101,7 +101,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-
+                                                
                                             @foreach($items as $index => $row)
                                             <tr>
                                                 <td>{{($index+1)}}</td>
@@ -109,11 +109,11 @@
                                                 <td>{{$row->address}}</td>
                                                 <td>{{$row->phone}}</td>
                                                 <td>{{$row->job}}</td>
-                                                <td>{{$row->total_point}}</td>
-                                                <td>{{$row->total_point}}</td>
-                                                <td>{{$row->disbursedRewards->sum('value') ?? " "}}</td>
+                                                <td>{{$row->projects->sum('bill_value')}}</td>
+                                                <td>{{$row->projects->sum('bill_value') - $row->disbursedRewards->sum('value')}}</td>
+                                                <td>{{$row->disbursedRewards->sum('value') *  $configration->pull_ratio / 100  ?? " "}}</td>
                                                 <td class="text-center">
-                                                    <a  href="{{URL::to('admin/equivalents?employeeId='.$row->id)}}"><button class="btn btn-xs btn-warning" title="مكافئة">مكافئة</button></a>
+                                                    <a  href="{{URL::to('admin/equivalents/create?employeeId='.$row->id)}}"><button class="btn btn-xs btn-warning" title="مكافئة">مكافئة</button></a>
                                                     
                                                 </td>
                                                 <td class="text-center">

@@ -29,13 +29,15 @@ class EquivalentController extends Controller
      */
     public function create()
     {
-        $pageTitle = "إضافة مشروع";
-        $default = ['0'=>'لايوجد'];
-        $items = Employee::where('active','=','1')->orderBy('id','desc')->pluck('name','id')->toArray();
+       
+        // $default = ['0'=>'لايوجد'];
+        $employee = Employee::where('active','=','1')->where('id',request('employeeId'))->first();
         // $clients = Client::all()->pluck('title','id')->toArray();
-        $items = $default + $items;
+        // $items = $default + $items;
        // dd($equivalents);
-        return view('admin.equivalents.add', compact('pageTitle' , 'items'));
+       $pageTitle = " صرف مكافئة ل " . $employee->name;
+       $configration = ProjectConfigration::find(1);
+        return view('admin.equivalents.add', compact('pageTitle' , 'employee','configration'));
 
     }//end store
 
@@ -52,25 +54,27 @@ class EquivalentController extends Controller
        $item =  new Equivalent();
        $item->value =$request->value ;
       
-    //    return $request->employee_id ;
-       if($request->employee_id != 0){
+    //    return $request->employeeId ;
+    //    if($request->employee_id != 0){
                 // return "test";
-        $item->employee_id = $request->employee_id;
-       }
-       else
-       {
-           return redirect()->back()->withInput();
-       }
+        $item->employee_id = $request->employeeId;
+    //    }
+    //    else
+    //    {
+    //        return redirect()->back()->withInput();
+    //    }
        $configration = ProjectConfigration::find(1);
        if( $request->value < $configration->minimum   ) {
         return redirect()->back()->withErrors(['error' => "قيمه الصرف اقل من الحد الادني "])->withInput();    
        }
       
-        $employee= Employee::find($request->employee_id);
-        if($employee->total_point >=  $request->value)
+        $employee= Employee::find($request->employeeId);
+        if(($employee->projects->sum('bill_value') - $employee->disbursedRewards->sum('value') ) >=  $request->value)
         {
-            $employee->total_point -=   $request->value;
-            $employee->save();
+            $item->user_id =  Auth::id();
+            $item->save();
+            
+            return redirect('admin/equivalents/create?employeeId='.$employee->id)->with(['addAction' => "تم صرف المكافئ بنجاح"]);
         }
         else
         { 
@@ -79,10 +83,7 @@ class EquivalentController extends Controller
         // return $employee;
      
 
-       $item->user_id =  Auth::id();
-       $item->save();
-
-       return redirect('admin/equivalents'. "?msg=11");
+     
     }//end store
 
 

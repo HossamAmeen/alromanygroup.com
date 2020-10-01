@@ -19,7 +19,8 @@ class EmployeeController extends Controller
     {
         $items = Employee::where('active','=','1')->orderBy('id','desc')->get();
         $pageTitle = "كل الفنيين";
-        return view('admin.employees.all', compact('items','pageTitle'));
+        $configration = \App\Models\ProjectConfigration::find(1);
+        return view('admin.employees.all', compact('items','pageTitle','configration'));
     }
 
     /**

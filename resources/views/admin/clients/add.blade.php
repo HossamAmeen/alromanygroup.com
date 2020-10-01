@@ -212,14 +212,14 @@
                             'max-length'=>'99'
                         )) !!}
                     </div>
-                    <div class="form-group col-md-6">
+                    {{-- <div class="form-group col-md-6">
                         <label for="content">اختر  فني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
                                  'id'=>'project_id',
                                  'class'=>' form-control ',
                                  'required'=>'required',
                      )) !!}
-                    </div>
+                    </div> --}}
 
                  
 

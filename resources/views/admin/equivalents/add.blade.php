@@ -163,27 +163,52 @@
             <div class="panel panel-default">
 
                 @include('admin._masters/validation_errors')
-
+                @if ( session('addAction') )
+                <div class="alert alert-info">
+                    <ul>
+                        <li> {{ session('addAction') }}</li>
+                    </ul>
+                </div>
+            
+                @endif
                 <div class="panel-heading">
-                    <h3 class="panel-title">صرف مكافئة</h3>
+                    <h3 class="panel-title">صرف مكافئة ل {{$employee->name}}</h3>
                 </div>
 
                 <div class="panel-body">
-                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/equivalents',  'enctype'=> 'multipart/form-data'  ))!!}
+                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/equivalents?employeeId='.$employee->id,  'enctype'=> 'multipart/form-data'  ))!!}
 
 
                    
                     <div class="form-group col-md-6">
                         <label > قيمة الصرف  </label>
-                        {!! Form::number($name = 'value', null, $attributes = array(
+                        <input type="number" name="value" class="form-control" onchange="getRewardValue()" id="rewardValue" required>
+                        {{-- {!! Form::number($name = 'value', null, $attributes = array(
+                            
+                            'class'=>'form-control',
+                            'placeholder'=>' قيمة الصرف ',
+                            'required'=>'required',
+                            'max-length'=>'99',
+                            'id' => 'rewardValuee'
+                        )) !!} --}}
+                        <span>الحد الادني للصرف {{$configration->minimum }}</span><br>
+                        <span>نسبة السحب {{$configration->pull_ratio }}</span><br>
+                        <span  > قيمة المكافئة (بالجنية): </span> <span id="rewardActualValue" ></span>
+                    </div>
+                  
+                    <div class="form-group col-md-6">
+                        <label >نقاط لسحب</label>
+                        <input class="form-control" 
+                        value="{{$employee->projects->sum('bill_value') - $employee->disbursedRewards->sum('value')}}" 
+                        readonly>
+                        {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
                             'class'=>'form-control',
                             'placeholder'=>' قيمة الصرف ',
                             'required'=>'required',
                             'max-length'=>'99'
-                        )) !!}
+                        )) !!} --}}
                     </div>
-                  
                     {{-- <div class="form-group col-md-6">
                         <label for="content">اختر  فني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
@@ -208,6 +233,13 @@
         </div> <!-- /. end row -->
     </div><!-- end row home-row-top-->
 
-
+<script>
+   function getRewardValue(){
+    var rewardValue = document.getElementById("rewardValue").value;
+    // Displaying the value
+    // alert(inputVal);
+    document.getElementById("rewardActualValue").innerHTML = rewardValue * {!!$configration->pull_ratio!!} / 100;
+   }
+</script>
 
 @stop

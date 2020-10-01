@@ -171,41 +171,50 @@
                 <div class="panel-body">
                     {!! Form::open( array('id'=>'newsForm','url'=>'admin/projects',  'enctype'=> 'multipart/form-data'  ))!!}
 
-
+                  
                     <div class="form-group col-md-6">
-                        <label for="title">اسم المشروع </label>
-                        {!! Form::text($name = 'name', null, $attributes = array(
+                        <label for="title">تاريخ الشراء</label>
+                        {!! Form::date($name = 'date', null, $attributes = array(
                             'id'=>'title',
                             'class'=>'form-control',
-                            'placeholder'=>'اسم المشروع',
+                            'placeholder'=>'تاريخ الشراء',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="title">وصف المشروع  </label>
-                        {!! Form::text($name = 'description', null, $attributes = array(
+                        <label for="title">رقم الفاتورة </label>
+                        {!! Form::number($name = 'bill_number', null, $attributes = array(
                             'id'=>'title',
                             'class'=>'form-control',
-                            'placeholder'=>'وصف المشروع',
+                            'placeholder'=>'رقم الفاتورة',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
                     <div class="form-group col-md-6">
-                        <label > نقاط المشروع</label>
-                        {!! Form::number($name = 'point', null, $attributes = array(
+                        <label > قيمة الفاتورة</label>
+                        {!! Form::number($name = 'bill_value', null, $attributes = array(
                             
                             'class'=>'form-control',
-                            'placeholder'=>'نقاط المشروع',
+                            'placeholder'=>'قيمة الفاتورة',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
                   
                     <div class="form-group col-md-6">
-                        <label for="content">اختر  فني</label>
+                        <label for="content">الفني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
+                                 'id'=>'project_id',
+                                 'class'=>' form-control ',
+                                 'required'=>'required',
+                     )) !!}
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="content">العميل</label>
+                        {!! Form::select($name = 'client_id', $clients , null, $attributes = array(
                                  'id'=>'project_id',
                                  'class'=>' form-control ',
                                  'required'=>'required',

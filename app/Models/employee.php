@@ -10,4 +10,9 @@ class Employee extends Model
     {
         return $this->hasMany(Equivalent::class)->where('active','=','1');
     }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class)->where('active','=','1');
+    }
 }

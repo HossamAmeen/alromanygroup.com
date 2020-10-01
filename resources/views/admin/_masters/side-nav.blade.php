@@ -70,10 +70,10 @@
             <li>
                 <a id="project-configration" href="#"> <i class="fa fa-suitcase"></i> <span>برنامج الوفاء</span></a>
                 <ul>
-                    <li><a href="{{URL::to('admin/project-configration')}}" id="project-configration"><span>اعدادات المشروع</span></a></li>
+                    <li><a href="{{URL::to('admin/project-configration')}}" id="project-configration"><span>اعدادات برنامج الوفاء</span></a></li>
                     <li><a href="{{URL::to('admin/employees')}}" id="employees"><span>كل الفنيين</span></a></li>
                     <li><a href="{{URL::to('admin/clients')}}" id="clients"><span>العملاء</span></a></li>
-                    <li><a href="{{URL::to('admin/projects')}}" id="projects2"><span>طلبات الشراء</span></a></li>
+                    <li><a href="{{URL::to('admin/projects')}}" id="projects2"><span>عمليات الشراء</span></a></li>
                     {{-- <li><a href="{{URL::to('admin/equivalents')}}" id="equivalents"><span>صرف المكافاءات</span></a></li> --}}
                 </ul>
             </li>

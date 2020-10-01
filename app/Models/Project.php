@@ -10,4 +10,9 @@ class Project extends Model
     {
         return $this->belongsTo(Employee::class);
     }
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

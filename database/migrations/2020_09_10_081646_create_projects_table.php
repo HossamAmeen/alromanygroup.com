@@ -12,11 +12,13 @@ class CreateProjectsTable extends Migration
      */
     public function up()
     {
+        
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('description')->nullable();
-            $table->double('point');
+            $table->date('date');
+            $table->string('bill_number');
+           
+            $table->double('bill_value');
             $table->boolean('active')->default(1);
 
             $table->integer('user_id')->unsigned();
@@ -24,6 +26,12 @@ class CreateProjectsTable extends Migration
                 ->references('id')->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+
+            $table->integer('client_id')->unsigned();
+            $table->foreign('client_id')
+                ->references('id')->on('clients')
+                ->onUpdate('cascade')
+                ->onDelete('cascade'); 
 
             $table->integer('employee_id')->unsigned();
             $table->foreign('employee_id')

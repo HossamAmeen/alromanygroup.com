@@ -89,11 +89,11 @@
                                             <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>اسم المشروع</th>
-                                                <th>تفاصيل المشروع </th>
-                                                <th>نقاط المشروع</th>
+                                                <th>تاريخ الدفع </th>
+                                                <th>قيمة الفتاورة  </th>
+                                                <th>رقم الفتاورة </th>
                                                 <th>خاص بالفني</th>
-
+                                                <th>خاص بالعميل</th>
                                                 <th class="text-center">خيارات</th>
                                             </tr>
                                             </thead>
@@ -102,11 +102,12 @@
                                             @foreach($items as $index => $row)
                                             <tr>
                                                 <td>{{($index+1)}}</td>
-                                                <td>{{$row->name}}</td>
-                                                <td>{{$row->description}}</td>
-                                                <td>{{$row->point}}</td>
+                                                <td>{{$row->date}}</td>
+                                                <td>{{$row->bill_value}}</td>
+                                                <td>{{$row->bill_number}}</td>
                                                 
                                                 <td>{{$row->employee->name??" "}}</td>
+                                                <td>{{$row->client->name??" "}}</td>
                                                 <td class="text-center">
                                                     <a  href="{{URL::to('admin/projects/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
                                                     <a class="check" href="{{URL::to('admin/projects/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>

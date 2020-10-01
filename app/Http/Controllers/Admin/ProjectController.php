@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\{Employee , Project ,ProjectConfigration};
+use App\Models\{Employee ,Client, Project ,ProjectConfigration};
 use Auth;
 class ProjectController extends Controller
 {
@@ -18,7 +18,7 @@ class ProjectController extends Controller
     public function index()
     {
         $items = Project::where('active','=','1')->orderBy('id','desc')->get();
-        $pageTitle = "كل المشاريع";
+        $pageTitle = "عمليات الشراء";
         return view('admin.projects.all', compact('items','pageTitle'));
     }
 
@@ -29,13 +29,18 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        $pageTitle = "إضافة مشروع";
+        $pageTitle = "إضافة عملية شراء";
         $default = ['0'=>'لايوجد'];
         $items = Employee::where('active','=','1')->orderBy('id','desc')->pluck('name','id')->toArray();
         // $clients = Client::all()->pluck('title','id')->toArray();
         $items = $default + $items;
+
+        $default = ['0'=>'لايوجد'];
+        $clients = Client::where('active','=','1')->orderBy('id','desc')->pluck('name','id')->toArray();
+        // $clients = Client::all()->pluck('title','id')->toArray();
+        $clients = $default + $items;
        // dd($projects);
-        return view('admin.projects.add', compact('pageTitle' , 'items'));
+        return view('admin.projects.add', compact('pageTitle' , 'items' , 'clients'));
 
     }//end store
 
@@ -50,10 +55,11 @@ class ProjectController extends Controller
         //$thumbnail = FileHelper::storeImage('img','uploads/news',320,180,'ZM_');
         // return $request->name;
        $item =  new Project();
-       $item->name =$request->name ;
-       $item->description =$request->description ;
-       $item->point = $request->point;
-    //    return $request->employee_id ;
+       $item->date =$request->date ;
+       $item->bill_number =$request->bill_number ;
+       $item->bill_value =$request->bill_value ;
+      
+        //    return $request->employee_id ;
        if($request->employee_id != 0){
                 // return "test";
         $item->employee_id = $request->employee_id;
@@ -62,18 +68,19 @@ class ProjectController extends Controller
        {
            return redirect()->back()->withInput();
        }
-      $configration = ProjectConfigration::find(1);
-      if( $configration ){
-
-        $employee= Employee::find($request->employee_id);
-        $employee->total_point +=  $configration->pull_ratio * $request->point / 100;
-        $employee->save();
-
-      }
-     
-
-       $item->user_id =  Auth::id();
-       $item->save();
+        if($request->client_id != 0){
+                // return "test";
+        $item->client_id = $request->client_id;
+       }
+       else
+       {
+           return redirect()->back()->withInput();
+       }
+        // $employee= Employee::find($request->employee_id);
+        // $employee->total_point +=$request->bill_value;
+        // $employee->save();
+        $item->user_id =  Auth::id();
+        $item->save();
 
        return redirect('admin/projects'. "?msg=11");
     }//end store
@@ -91,7 +98,7 @@ class ProjectController extends Controller
         $items = Employee::where('active','=','1')->orderBy('id','desc')->pluck('name','id')->toArray();
         $items = $default + $items;
         $item = Project::findOrFail($id);
-        $pageTitle = "تعديل مشروع " . $item->name;
+        $pageTitle = "تعديل عملية شراء " . $item->name;
       
         return view('admin.projects.update', compact('item','pageTitle' , 'items'));
     }

@@ -27,7 +27,7 @@ class CreateClientsTable extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->integer('employee_id')->unsigned();
+            $table->integer('employee_id')->unsigned()->nullable();
             $table->foreign('employee_id')
                 ->references('id')->on('employees')
                 ->onUpdate('cascade')
