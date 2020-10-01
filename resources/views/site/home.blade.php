@@ -487,8 +487,9 @@
                                 </div>
                                 <div class="col-sm-12 wow bounceInLeft">
                                     <textarea name="msg" id="msg" placeholder="الرسالة*" required="required"></textarea>
+                                    <div class="g-recaptcha" data-sitekey="6LfCsrMZAAAAAEMi62H0roxGgd8ueJV6FQC4zuxt"></div>
                                 </div>
-                                <div class="g-recaptcha" data-sitekey="6LfCsrMZAAAAAEMi62H0roxGgd8ueJV6FQC4zuxt"></div><br><br><br>
+                                {{-- <br><br><br> --}}
                                 <div class="col-sm-12 wow bounceInDown">
                                     <input type="submit" value="إرسل">
                                 </div>
