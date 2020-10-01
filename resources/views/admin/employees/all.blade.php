@@ -109,7 +109,7 @@
                                                 <td>{{$row->address}}</td>
                                                 <td>{{$row->phone}}</td>
                                                 <td>{{$row->job}}</td>
-                                                <td>{{$row->projects->sum('bill_value')}}</td>
+                                                <td>{{$row->projects->sum('bill_value') ?? 0}}</td>
                                                 <td>{{$row->projects->sum('bill_value') - $row->disbursedRewards->sum('value')}}</td>
                                                 <td>{{$row->disbursedRewards->sum('value') *  $configration->pull_ratio / 100  ?? " "}}</td>
                                                 <td class="text-center">
