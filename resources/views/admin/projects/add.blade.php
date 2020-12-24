@@ -71,28 +71,6 @@
     $(document).ready(function(){
         $('#news').addClass('active');
     });
-    $("#img").fileinput({
-        overwriteInitial: true,
-        maxFileSize: 3000,
-        showCaption: false,
-        showPreview: true,
-        showRemove: true,
-        showUpload: false, // <------ just set this from true to false
-        showCancel: true,
-        showUploadedThumbs: true,
-        browseLabel: '',
-        removeLabel: '',
-        browseIcon: '<i class="glyphicon glyphicon-folder-open"></i>',
-        removeIcon: '<i class="glyphicon glyphicon-remove"></i>',
-        removeTitle: 'Cancel or reset changes',
-        elErrorContainer: '#kv-avatar-errors',
-        msgErrorClass: 'alert alert-block alert-danger',
-        defaultPreviewContent: '<img src="{{URL::asset(\App\Models\NewsModel::DEFAULT_MEDIA_COVER)}}" alt="Your Avatar" style="width:160px">',
-        layoutTemplates: {main2: '{preview} ' +   ' {remove} {browse}'},
-        allowedFileExtensions: ["jpg", "png", "gif"]
-    });
-
-
 
 
 </script>
@@ -165,7 +143,7 @@
                 @include('admin._masters/validation_errors')
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">إضافة مشروع جديد</h3>
+                    <h3 class="panel-title">إضافة عملية بيع جديدة</h3>
                 </div>
 
                 <div class="panel-body">
@@ -206,7 +184,7 @@
                     <div class="form-group col-md-6">
                         <label for="content">الفني</label>
                         {!! Form::select($name = 'employee_id', $items , null, $attributes = array(
-                                 'id'=>'project_id',
+                                 'id'=>'employee_id',
                                  'class'=>' form-control ',
                                  'required'=>'required',
                      )) !!}
@@ -215,7 +193,7 @@
                     <div class="form-group col-md-6">
                         <label for="content">العميل</label>
                         {!! Form::select($name = 'client_id', $clients , null, $attributes = array(
-                                 'id'=>'project_id',
+                                 'id'=>'client_id',
                                  'class'=>' form-control ',
                                  'required'=>'required',
                      )) !!}

@@ -158,7 +158,7 @@
 
              
              <div class="form-group col-md-6">
-                <label for="title">الحد الأدنى لصرف مكافأة </label>
+                <label for="title">الحد الأدنى لصرف مكافأة</label>
                 {!! Form::number($name = 'minimum', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
@@ -168,11 +168,11 @@
                 )) !!}
             </div>
             <div class="form-group col-md-6">
-                <label for="title">المكافأة بالنسبة المئوية</label>
+                <label for="title">النسبة المئوية للمكافأة</label>
                 {!! Form::number($name = 'pull_ratio', null, $attributes = array(
                     'id'=>'title',
                     'class'=>'form-control',
-                    'placeholder'=>'المكافأة بالنسبة المئوية',
+                    'placeholder'=>'النسبة المئوية للمكافأة',
                     'required'=>'required',
                     'max-length'=>'99'
                 )) !!}

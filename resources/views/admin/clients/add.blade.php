@@ -182,33 +182,35 @@
                             'max-length'=>'99'
                         )) !!}
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="title">عنوان العميل </label>
-                        {!! Form::text($name = 'address', null, $attributes = array(
-                            'id'=>'title',
-                            'class'=>'form-control',
-                            'placeholder'=>'عنوان العميل',
-                            'required'=>'required',
-                            'max-length'=>'99'
-                        )) !!}
-                    </div>
+
                     <div class="form-group col-md-6">
                         <label >هاتف العميل </label>
                         {!! Form::number($name = 'phone', null, $attributes = array(
-                            
+
                             'class'=>'form-control',
                             'placeholder'=>'هاتف العميل',
                             'required'=>'required',
                             'max-length'=>'99'
                         )) !!}
                     </div>
+
                     <div class="form-group col-md-6">
-                        <label >تخصص العميل </label>
+                        <label for="title">عنوان العميل </label>
+                        {!! Form::text($name = 'address', null, $attributes = array(
+                            'id'=>'title',
+                            'class'=>'form-control',
+                            'placeholder'=>'عنوان العميل',
+
+                            'max-length'=>'99'
+                        )) !!}
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label >وظيفة العميل</label>
                         {!! Form::text($name = 'job', null, $attributes = array(
                             
                             'class'=>'form-control',
-                            'placeholder'=>'تخصص العميل',
-                            'required'=>'required',
+                            'placeholder'=>'وظيفة العميل',
                             'max-length'=>'99'
                         )) !!}
                     </div>
@@ -227,7 +229,7 @@
 
                     
 
-                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة فني" />
+                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة عميل" />
 
                     {!!Form::close()!!}
                 </div> <!-- end panel body -->

@@ -38,7 +38,7 @@ class ProjectController extends Controller
         $default = ['0'=>'لايوجد'];
         $clients = Client::where('active','=','1')->orderBy('id','desc')->pluck('name','id')->toArray();
         // $clients = Client::all()->pluck('title','id')->toArray();
-        $clients = $default + $items;
+        $clients = $default + $clients;
        // dd($projects);
         return view('admin.projects.add', compact('pageTitle' , 'items' , 'clients'));
 

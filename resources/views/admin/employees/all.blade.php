@@ -87,35 +87,43 @@
              <div class="table-responsive ls-table">
                                         <table class="table table-bordered table-striped">
                                             <thead>
-                                            <tr>
+                                            <tr class="text-center">
                                                 <th>#</th>
                                                 <th>اسم الفني</th>
                                                 <th>عنوان الفني</th>
                                                 <th>الهاتف</th>
-                                                <th>تخصص</th>
-                                                <th>إجمالي البيعات</th>
+                                                <th>التخصص</th>
+                                                <th>تاريخ التسجيل</th>
+                                                <th>عدد العمليات</th>
+                                                <th>إجمالي المبيعات</th>
                                                 <th>إجمالي النقاط</th>
-                                                <th>إجمالي المكافئات المصروفة</th>
-                                                <th>صرف المكافئة</th>
+                                                <th>إجمالي المكافآت المستلمة</th>
+                                                <th>إجمالي النقاط المصروفة</th>
+                                                <th>النقاط المتبقية</th>
+                                                <th>صرف مكافآة</th>
                                                 <th class="text-center">خيارات</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                                 
                                             @foreach($items as $index => $row)
-                                            <tr>
+                                            <tr class="text-center">
                                                 <td>{{($index+1)}}</td>
                                                 <td>{{$row->name}}</td>
                                                 <td>{{$row->address}}</td>
                                                 <td>{{$row->phone}}</td>
                                                 <td>{{$row->job}}</td>
-                                                <td>{{$row->projects->sum('bill_value') }}</td>
-                                                <td>{{$row->projects->sum('bill_value') - $row->disbursedRewards->sum('value')}}</td>
-                                                <td>{{$row->disbursedRewards->sum('value') *  $configration->pull_ratio / 100 }}</td>
-                                                <td class="text-center">
-                                                    <a  href="{{URL::to('admin/equivalents/create?employeeId='.$row->id)}}"><button class="btn btn-xs btn-warning" title="مكافئة">مكافئة</button></a>
-                                                    
+                                                <td>{{$row->created_at}}</td>
+                                                <td>{{$row->total_operations}}</td>
+                                                <td>{{$row->total_sales}}</td>
+                                                <td>{{$row->total_sales}}</td>
+                                                <td>{{$row->total_equivalents}}</td>
+                                                <td>{{$row->total_points}}</td>
+                                                <td>{{$row->total_sales - $row->total_points}}</td>
+                                                <td>
+                                                    <a  href="{{URL::to('admin/equivalents/create?employeeId='.$row->id)}}"><button class="btn btn-xs btn-success" title="صرف مكافأة">صرف</button></a>
                                                 </td>
+
                                                 <td class="text-center">
                                                     <a  href="{{URL::to('admin/employees/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
                                                     <a class="check" href="{{URL::to('admin/employees/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>

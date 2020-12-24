@@ -33,11 +33,11 @@ class CreateProjectsTable extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade'); 
 
-            $table->integer('employee_id')->unsigned();
+          $table->integer('employee_id')->unsigned();
             $table->foreign('employee_id')
                 ->references('id')->on('employees')
                 ->onUpdate('cascade')
-                ->onDelete('cascade');    
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

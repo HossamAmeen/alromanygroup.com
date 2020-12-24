@@ -172,7 +172,7 @@
             
                 @endif
                 <div class="panel-heading">
-                    <h3 class="panel-title">صرف مكافئة ل {{$employee->name}}</h3>
+                    <h3 class="panel-title">صرف مكافأة لـ {{$employee->name}}</h3>
                 </div>
 
                 <div class="panel-body">
@@ -181,7 +181,7 @@
 
                    
                     <div class="form-group col-md-6">
-                        <label > قيمة الصرف  </label>
+                        <label >عدد النقاط</label>
                         <input type="number" name="value" class="form-control" onchange="getRewardValue()" id="rewardValue" required>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
@@ -192,12 +192,12 @@
                             'id' => 'rewardValuee'
                         )) !!} --}}
                         <span>الحد الادني للصرف {{$configration->minimum }}</span><br>
-                        <span>نسبة السحب {{$configration->pull_ratio }}</span><br>
+                        <span>نسبة السحب {{$configration->pull_ratio }}%</span><br>
                         <span  > قيمة المكافئة (بالجنية): </span> <span id="rewardActualValue" ></span>
                     </div>
                   
                     <div class="form-group col-md-6">
-                        <label >نقاط لسحب</label>
+                        <label >نقاط متاحة للسحب</label>
                         <input class="form-control" 
                         value="{{$employee->projects->sum('bill_value') - $employee->disbursedRewards->sum('value')}}" 
                         readonly>
@@ -224,7 +224,7 @@
 
                     
 
-                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="صرف الفلوس" />
+                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="صرف المكافأة" />
 
                     {!!Form::close()!!}
                 </div> <!-- end panel body -->

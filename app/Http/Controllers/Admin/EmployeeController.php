@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Equivalent;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
 use Auth;
+use DB;
+
 class EmployeeController extends Controller
 {
     /**
@@ -17,7 +20,32 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $items = Employee::where('active','=','1')->orderBy('id','desc')->get();
+//        $items = Employee::where('active','=','1')->orderBy('id','desc')->get();
+//        dd ($items);
+        $query = "select e.id, e.name, e.job, e.address, e.phone, count(p.id) as total_operations ";
+        $query .= ",sum(bill_value) as total_sales,  e.created_at ";
+//        $query .= " , sum(eq.value) as total_equivalents ";
+
+        $query .= "from employees e ";
+
+        $query .= "left Join projects p ";
+        $query .= "on e.id = p.employee_id  ";
+
+//        $query .= "left Join equivalents eq ";
+//        $query .= "on e.id = eq.employee_id  ";
+
+
+        $query .= "where e.active = 1 and p.active = 1 ";
+
+        $query .= "GROUP BY e.id  ";
+        $query .= "order by e.name  ";
+
+
+        $items = DB::select($query);
+
+        Equivalent::add_total_equivalents($items);
+//        dd($items);
+
         $pageTitle = "كل الفنيين";
         $configration = \App\Models\ProjectConfigration::find(1);
         return view('admin.employees.all', compact('items','pageTitle','configration'));

@@ -92,8 +92,8 @@
                                                 <th>تاريخ الدفع </th>
                                                 <th>قيمة الفتاورة  </th>
                                                 <th>رقم الفتاورة </th>
-                                                <th>خاص بالفني</th>
-                                                <th>خاص بالعميل</th>
+                                                <th>الفني</th>
+                                                <th>العميل</th>
                                                 <th class="text-center">خيارات</th>
                                             </tr>
                                             </thead>
@@ -106,10 +106,10 @@
                                                 <td>{{$row->bill_value}}</td>
                                                 <td>{{$row->bill_number}}</td>
                                                 
-                                                <td>{{$row->employee->name??" "}}</td>
-                                                <td>{{$row->client->name??" "}}</td>
+                                                <td>{{$row->employee->name}}</td>
+                                                <td>{{$row->client->name}}</td>
                                                 <td class="text-center">
-                                                    <a  href="{{URL::to('admin/projects/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
+                                                    {{--<a  href="{{URL::to('admin/projects/'.$row->id .'/edit')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>--}}
                                                     <a class="check" href="{{URL::to('admin/projects/'.$row->id .'/delete')}}"><button class="btn btn-xs btn-danger" title="حذف"><i class="fa fa-minus"></i></button></a>
                                                 </td>
                                             </tr>
