@@ -21,10 +21,10 @@ class Prefs extends Migration
             $table->string('email',45)->nullable();
             $table->string('tel',45)->nullable();
             $table->string('facebook',100)->nullable();
-/*            $table->string('youtube',31)->nullable();*/
-/*            $table->string('instagram',31)->nullable();*/
-/*            $table->string('android',31)->nullable();*/
-/*            $table->string('twitter',31)->nullable();*/
+          $table->string('youtube',31)->nullable();
+            $table->string('instagram',31)->nullable();
+            $table->string('android',31)->nullable();
+           $table->string('twitter',31)->nullable();
             $table->string('manager_talk',2048)->nullable();
             $table->timestamps();
 
