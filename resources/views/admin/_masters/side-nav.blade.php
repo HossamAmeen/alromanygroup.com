@@ -36,28 +36,31 @@
 
 
             @if(\App\Models\UserModel::isManger())
-                    <li><a id="managers" href="{{URL::to('admin/managers')}}"><span> <i class="fa fa-users"></i>المديرون</span></a></li>
+                    <li><a id="managers" href="{{URL::to('admin/managers')}}"><span> <i class="fa fa-users-cog"></i>المديرون</span></a></li>
             @endif
 
-            {{--<li><a id="services" href="{{URL::to('admin/works')}}"><span>  <i class="fa fa-briefcase"></i> سابقة الأعمال </span></a></li>
-
-            <li>
-                <a id="news"  href="#"> <i class="fa fa-suitcase"></i> <span>الأخبار</span></a>
-                <ul>
-                    <li><a href="{{URL::to('admin/news/add')}}"><span>إضافة خبر</span></a></li>
-                    <li><a href="{{URL::to('admin/news')}}"><span>كل الأخبار</span></a></li>
-                </ul>
-            </li>
-            <li>
-                <a id="news"  href="#"> <i class="fa fa-suitcase"></i> <span>المتابعات</span></a>
-                <ul>
-                    <li><a href="{{URL::to('admin/follows/add')}}"><span>إضافة متابعه</span></a></li>
-                    <li><a href="{{URL::to('admin/follows')}}"><span>كل المتابعات</span></a></li>
-                </ul>
+            <li><a id="application_users" href="{{URL::to('admin/application-users')}}">
+                <span>  <i class="fa fa-users"></i>مستخدمي التطبيق</span></a>
             </li>
 
+            {{--
+                        <li>
+                            <a id="news"  href="#"> <i class="fa fa-suitcase"></i> <span>الأخبار</span></a>
+                            <ul>
+                                <li><a href="{{URL::to('admin/news/add')}}"><span>إضافة خبر</span></a></li>
+                                <li><a href="{{URL::to('admin/news')}}"><span>كل الأخبار</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a id="news"  href="#"> <i class="fa fa-suitcase"></i> <span>المتابعات</span></a>
+                            <ul>
+                                <li><a href="{{URL::to('admin/follows/add')}}"><span>إضافة متابعه</span></a></li>
+                                <li><a href="{{URL::to('admin/follows')}}"><span>كل المتابعات</span></a></li>
+                            </ul>
+                        </li>
 
-            <li><a id="managers" href="{{URL::to('admin/faq')}}"><span> <i class="fa fa-question"></i>أسئلة واجابات </span></a></li>--}}
+
+                        <li><a id="managers" href="{{URL::to('admin/faq')}}"><span> <i class="fa fa-question"></i>أسئلة واجابات </span></a></li>--}}
 
             <li>
                 <a id="projects" href="#"> <i class="fa fa-suitcase"></i> <span>العروض</span></a>
