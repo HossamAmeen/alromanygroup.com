@@ -125,4 +125,16 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
     Route::put('admin/faq/replay/{id}', 'Site\Questions@replay_question');
     Route::get('admin/faq/{id}/delete', 'Site\Questions@destroy');
 
+
 });
+
+
+Route::group(['middleware' => ['checkSuperVisor']], function () {
+
+    Route::get('admin/application-users', 'Admin\ApplicationUser@index');
+    Route::get('admin/application-user/make-discount/{id}', 'Admin\ApplicationUser@make_discount');
+
+//    Route::get('admin/application-users', 'Admin\ApplicationUser@make_discount');
+});
+
+Route::post('api/new-application-user','Admin\ApplicationUser@store');

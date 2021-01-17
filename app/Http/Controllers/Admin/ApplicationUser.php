@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\AppUserModel;
 use App\Models\Equivalent;
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
+use Illuminate\Http\Request as Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Employee;
 use Auth;
 use DB;
+use Illuminate\Support\Facades\Redirect;
 
 class ApplicationUser extends Controller
 {
@@ -21,67 +21,39 @@ class ApplicationUser extends Controller
      */
     public function index()
     {
-        $news = NewsModel::where('active', '=', '1')->orderBy('id', 'desc')->get();
-        $pageTitle = "?? ???????";
-        return view('admin.news.all-news', compact('news', 'pageTitle'));
+        $mAppUsers = AppUserModel::where('active', '=', '1')->orderBy('macAddress', 'desc')->orderBy('id', 'desc')->orderBy('macAddress', 'desc')->get();
+        $pageTitle = "??????? ???????";
+        return view('admin.app-users.all', compact('mAppUsers', 'pageTitle'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        $pageTitle = "????? ???";
-        $default = ['0' => '??????'];
-        $projects = ProjectModel::all()->pluck('title', 'id')->toArray();
-        $projects = $default + $projects;
-        // dd($projects);
-        return view('admin.news.add', compact('pageTitle', 'projects'));
 
-    }//end store
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @return Response
-     */
+
     public function store(Requests $request)
     {
-        $this->validate($request, $this->getFormValidationRules(), $this->getFormValidationMessages());
-        //$thumbnail = FileHelper::storeImage('img','uploads/news',320,180,'ZM_');
-        NewsModel::create_news();
-        return redirect(NewsModel::get_news_url() . "?msg=11");
+//        echo json_encode('reach');
+//        echo json_encode('start store user');
+
+       $mAppUser =  AppUserModel::create_app_user();
+
+        $return = [];
+        $return ['success'] = true;
+        echo json_encode($return);
+
+//        echo json_encode($mAppUser);
+//        echo json_encode('done');
+
     }//end store
 
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-
-        $mNews = NewsModel::find($id);
-        if (empty($mNews->title))
-            return redirect(NewsModel::get_news_url());
-
-        $pageTitle = "????? ??? " . $mNews->title;
-        $default = ['0' => '???? ?????'];
-        $projects = ProjectModel::all()->pluck('title', 'id')->toArray();
-        $projects = $default + $projects;
-        return view('admin.news.update', compact('mNews', 'pageTitle', 'projects'));
+    public function make_discount($id){
+        $mAppUser = AppUserModel::find($id);
+        $mAppUser->discount_datetime = date('Y-m-d h:i:s');
+        $mAppUser->has_gotten_discount = 1;
+        $mAppUser->save();
+        return Redirect::back();
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
+
     public function update($id, Requests $request)
     {
         $id = intval($id);

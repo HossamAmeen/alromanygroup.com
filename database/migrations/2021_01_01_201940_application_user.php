@@ -22,10 +22,13 @@ class ApplicationUser extends Migration
             $table->string('job');
             $table->string('macAddress');
             $table->integer('user_no');
+
             $table->boolean('has_gotten_discount') ->default(0);
+            $table->dateTime('discount_datetime') ->nullable();
+
             $table->boolean('active')->default(1);
 
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onUpdate('cascade')
