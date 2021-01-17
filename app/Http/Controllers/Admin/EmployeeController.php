@@ -22,7 +22,7 @@ class EmployeeController extends Controller
     {
 //        $items = Employee::where('active','=','1')->orderBy('id','desc')->get();
 //        dd ($items);
-        $query = "select e.id, e.name, e.job, e.address, e.phone, count(p.id) as total_operations ";
+        $query = "select e.id, e.name, e.job, e.address, e.phone, count(p.id) as total_operations , count(p.id) as total_operations ";
         $query .= ",sum(bill_value) as total_sales,  e.created_at ";
 //        $query .= " , sum(eq.value) as total_equivalents ";
 

@@ -199,13 +199,7 @@
                      )) !!}
                     </div>
 
-                 
-
-
-
-                    
-
-                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة فني" />
+                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة مشروع" />
 
                     {!!Form::close()!!}
                 </div> <!-- end panel body -->
