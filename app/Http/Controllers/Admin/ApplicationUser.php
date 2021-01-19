@@ -38,6 +38,8 @@ class ApplicationUser extends Controller
 
         $return = [];
         $return ['success'] = true;
+        $return ['user_no'] = $mAppUser->user_no;
+
         echo json_encode($return);
 
 //        echo json_encode($mAppUser);
@@ -54,20 +56,6 @@ class ApplicationUser extends Controller
     }
 
 
-    public function update($id, Requests $request)
-    {
-        $id = intval($id);
-        $this->validate($request, $this->getFormValidationRules(), $this->getFormValidationMessages());
-        NewsModel::update_news($id);
-        return redirect(NewsModel::get_news_url() . "?msg=12");
-    }//end update
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int $id
-     * @return Response
-     */
     public function destroy($id)
     {
         $mNews = NewsModel::find(intval($id));
