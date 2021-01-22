@@ -63,7 +63,7 @@
                         <li><a id="managers" href="{{URL::to('admin/faq')}}"><span> <i class="fa fa-question"></i>أسئلة واجابات </span></a></li>--}}
 
             <li>
-                <a id="projects" href="#"> <i class="fa fa-suitcase"></i> <span>العروض</span></a>
+                <a id="offers" href="#"> <i class="fa fa-suitcase"></i> <span>العروض</span></a>
                 <ul>
                     <li><a href="{{URL::to('admin/offers/add')}}"><span>إضافة عرض</span></a></li>
                     <li><a href="{{URL::to('admin/offers')}}"><span>كل العروض</span></a></li>
@@ -71,9 +71,17 @@
             </li>
 
             <li>
-                <a id="project-configration" href="#"> <i class="fa fa-suitcase"></i> <span>برنامج الوفاء</span></a>
+                <a id="categories" href="#"> <i class="fa fa-address-card"></i> <span>التصنيفات</span></a>
                 <ul>
-                    <li><a href="{{URL::to('admin/project-configration')}}" id="project-configration"><span>إعدادات برنامج الوفاء</span></a></li>
+                    <li><a href="{{URL::to('admin/cat/add')}}"><span>إضافة تصنيف</span></a></li>
+                    <li><a href="{{URL::to('admin/cats')}}"><span>كل التصنيفات</span></a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a id="project-configuration" href="#"> <i class="fa fa-suitcase"></i> <span>برنامج الوفاء</span></a>
+                <ul>
+                    <li><a href="{{URL::to('admin/project-configuration')}}" id="project-configuration"><span>إعدادات برنامج الوفاء</span></a></li>
                     <li><a href="{{URL::to('admin/employees')}}" id="employees"><span>الفنيين</span></a></li>
                     <li><a href="{{URL::to('admin/clients')}}" id="clients"><span>العملاء</span></a></li>
                     <li><a href="{{URL::to('admin/projects')}}" id="projects2"><span>عمليات الشراء</span></a></li>

@@ -38,7 +38,7 @@ class ApplicationUser extends Controller
 
         $return = [];
         $return ['success'] = true;
-        $return ['user_no'] = $mAppUser->user_no;
+        $return ['data']['user_no'] = $mAppUser->user_no;
 
         echo json_encode($return);
 

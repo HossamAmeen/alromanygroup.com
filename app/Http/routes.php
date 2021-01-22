@@ -74,6 +74,14 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
     Route::post('admin/works', 'Admin\Work@store');
     Route::get('admin/work/{id}/delete', 'Admin\Work@destroy');
 
+    //cats routes
+    Route::get('admin/cats', 'Admin\CategoryController@index');
+    Route::get('admin/cat/add', 'Admin\CategoryController@create');
+    Route::post('admin/cat/add', 'Admin\CategoryController@store');
+    Route::get('admin/cat/{id}/delete', 'Admin\CategoryController@destroy');
+    Route::get('admin/cat/{id}/update', 'Admin\CategoryController@edit');
+    Route::put('admin/cat/{id}/update', 'Admin\CategoryController@update');
+
     //news routes
     Route::get('admin/news', 'Admin\News@index');
     Route::get('admin/news/add', 'Admin\News@create');
