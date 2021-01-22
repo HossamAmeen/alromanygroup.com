@@ -123,4 +123,13 @@ class CategoryController extends Controller {
             'img'               => 'image|max:3000',
         );
     }//end get validation rules
+
+    public function api_get_categories(){
+        $cats = CategoryModel::get_categories_names_and_icons();
+        $return = [];
+        $return ['success'] = true;
+        $return ['data']['categories'] = $cats;
+        echo json_encode($return);
+
+    }
 }

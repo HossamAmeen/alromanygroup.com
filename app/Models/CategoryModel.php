@@ -17,14 +17,18 @@ class CategoryModel extends Model {
     const DEFAULT_MEDIA_COVER = "resources/assets/admin/images/fav.png";
     protected $table = 'categories';
 
-    public static function get_categories_names(){
-        $query = "select name from categories ";
+    public static function get_categories_names_and_icons(){
+        $query = "select name, icon from categories ";
         $query .= "where active = 1 ";
         $query .= "order by id ";
 
         $results = DB::select($query);
-        if(!empty($results[0])){
-            return $results[0]->title;
+        if(!empty($results)){
+            foreach($results as $key => $row){
+                $data[$key]['name'] = $row->name;
+                $data[$key]['icon'] = $row->icon;
+            }
+            return $data;
         }else{
             return FALSE;
         }
@@ -38,7 +42,7 @@ class CategoryModel extends Model {
         $mCategory->name = Input::get('name');
 
         //image
-        $icon = FileHelper::storeImage('icon','uploads/categories',400,400,'ROMANY_');
+        $icon = FileHelper::storeImage('icon','uploads/categories',400,400,'ROMANY_CAT_');
         if(!empty($icon)){
             $mCategory->icon = $icon;
         }else{
@@ -55,7 +59,7 @@ class CategoryModel extends Model {
         $mCat->name = Input::get('name');
 
         //image
-        $icon = FileHelper::storeImage('icon','uploads/categories',400,400,'ROMANY_');
+        $icon = FileHelper::storeImage('icon','uploads/categories',400,400,'ROMANY_CAT_');
         if(!empty($icon)){
             $mCat->icon = $icon;
         }

@@ -146,3 +146,5 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
 });
 
 Route::post('api/new-application-user','Admin\ApplicationUser@store');
+Route::get('api/get-categories', 'Admin\CategoryController@api_get_categories');
+
