@@ -17,13 +17,20 @@ class Product extends Migration
             $table->increments('id');
 
             $table->string('name');
-            $table->string('last_price');
-            $table->string('price');
+            $table->double('price');
+            $table->double('offer_price');
+            $table->boolean('has_offer')->default(0);
             $table->string('description');
             $table->string('qr_code')->nullable();
-            $table->string('main_image')->nullable();
+            $table->string('image')->nullable();
 
             $table->boolean('active')->default(1);
+
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')
+                ->references('id')->on('categories')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')

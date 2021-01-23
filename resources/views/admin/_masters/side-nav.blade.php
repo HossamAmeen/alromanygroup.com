@@ -79,6 +79,14 @@
             </li>
 
             <li>
+                <a id="products" href="#"> <i class="fa fa-cubes"></i> <span>المنتجات</span></a>
+                <ul>
+                    <li><a href="{{URL::to('admin/product/add')}}"><span>إضافة منتج</span></a></li>
+                    <li><a href="{{URL::to('admin/products')}}"><span>كل المنتجات</span></a></li>
+                </ul>
+            </li>
+
+            <li>
                 <a id="project-configuration" href="#"> <i class="fa fa-suitcase"></i> <span>برنامج الوفاء</span></a>
                 <ul>
                     <li><a href="{{URL::to('admin/project-configuration')}}" id="project-configuration"><span>إعدادات برنامج الوفاء</span></a></li>

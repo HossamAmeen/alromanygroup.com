@@ -33,8 +33,28 @@ class CategoryModel extends Model {
             return FALSE;
         }
 
-    }//end getting categories name
+    }//end getting categories name and icons
 
+
+    public static function get_categories_names_as_array(){
+        $query = "select id, name from categories ";
+        $query .= "where active = 1 ";
+        $query .= "order by id ";
+
+        $results = DB::select($query);
+        if(!empty($results)){
+            $index = 0;
+            foreach($results as $row){
+                $data[$index]['value'] = $row->name;
+                $data[$index]['name'] = $row->name;
+                $index++;
+            }
+            return $data;
+        }else{
+            return FALSE;
+        }
+
+    }//end getting categories name and icons
 
     public  static function create_category(){
 
@@ -42,16 +62,16 @@ class CategoryModel extends Model {
         $mCategory->name = Input::get('name');
 
         //image
-        $icon = FileHelper::storeImage('icon','uploads/categories',400,400,'ROMANY_CAT_');
+        $icon = FileHelper::storeImage('icon','uploads/categories',400,400,'ROMANY_PRODUCT_');
         if(!empty($icon)){
             $mCategory->icon = $icon;
         }else{
-            $mCategory->icon = NewsModel::DEFAULT_MEDIA_COVER;
+            $mCategory->icon = ProductModel::DEFAULT_MEDIA_COVER;
         }
-
 
         $mCategory->user_id = Auth::id();
         $mCategory->save();
+
     }//end create category
 
     public  static function update_category($catId){

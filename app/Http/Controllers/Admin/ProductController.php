@@ -19,7 +19,7 @@ use Request;
 use Auth;
 use URL;
 
-class CategoryController extends Controller {
+class ProductController extends Controller {
 
 
 
@@ -30,9 +30,9 @@ class CategoryController extends Controller {
      */
     public function index()
     {
-        $cats = CategoryModel::where('active','=','1')->orderBy('id','desc')->get();
-        $pageTitle = "كل التصنيفات";
-        return view('admin.categories.all', compact('cats','pageTitle'));
+        $products = ProductModel::where('active','=','1')->orderBy('id','desc')->get();
+        $pageTitle = "كل المنتجات";
+        return view('admin.products.all', compact('products','pageTitle'));
     }
 
     /**
@@ -42,8 +42,9 @@ class CategoryController extends Controller {
      */
     public function create()
     {
-        $pageTitle = "إضافة تصنيف جديد";
-        return view('admin.categories.add', compact('pageTitle'));
+        $pageTitle = "إضافة منتج جديد";
+        $categories = CategoryModel::where('active','=','1')->pluck('name','id')->toArray();
+        return view('admin.products.add', compact('pageTitle','categories'));
 
     }//end store
 
@@ -54,9 +55,10 @@ class CategoryController extends Controller {
      */
     public function store(Requests $request)
     {
+
         $this->validate($request, $this->getFormValidationRules(), $this->getFormValidationMessages());
-        CategoryModel::create_category();
-       return redirect(URL::to('admin/cats'));
+        ProductModel::create_product();
+        return redirect(URL::to('admin/products'));
     }//end store
 
 
@@ -69,12 +71,15 @@ class CategoryController extends Controller {
     public function edit( $id)
     {
 
-        $mCat = CategoryModel::find($id);
-        if(empty($mCat->name))
-            return redirect(URL::to('admin/cats'));
+        $mProduct = ProductModel::find($id);
+        if(empty($mProduct->name))
+            return redirect(URL::to('admin/products'));
 
-        $pageTitle = "تعديل التصنيف " . $mCat->name;
-        return view('admin.categories.update', compact('mCat','pageTitle'));
+        $categories = CategoryModel::where('active','=','1')->pluck('name','id')->toArray();
+
+
+        $pageTitle = "تعديل المنتج " . $mProduct->name;
+        return view('admin.products.update', compact('mProduct','pageTitle','categories'));
     }
 
     /**
@@ -87,8 +92,8 @@ class CategoryController extends Controller {
     {
         $id = intval($id);
         $this->validate($request, $this->getFormValidationRules(), $this->getFormValidationMessages());
-        CategoryModel::update_category($id);
-        return redirect(URL::to('admin/cats'));
+        ProductModel::update_product($id);
+        return redirect(URL::to('admin/products'));
     }//end update
 
     /**
@@ -99,30 +104,29 @@ class CategoryController extends Controller {
      */
     public function destroy($id)
     {
-        $mCat = CategoryModel::find(intval($id));
+        $mProduct = ProductModel::find(intval($id));
 
-        if(!empty($mCat->id)){
-            $mCat->deactivate();
+        if(!empty($mProduct->id)){
+            $mProduct->deactivate();
         }
 
-        return redirect(URL::to('admin/cats'));
+        return redirect(URL::to('admin/products'));
     }
 
 
 
     private function getFormValidationMessages() {
         return array(
-            'name.required'                => "رجاء إدخال اسم التصنيف",
-            'icon.max'                => "لقد تجاوزت الحد الأقصى لحجم الصورة",
-            'category_id.exists'                => "exists:categories",
+            'name.required'                => "رجاء إدخال اسم المنتج",
+            'price.required'                => "رجاء إدخال اسم المنتج",
+            'image.max'                => "لقد تجاوزت الحد الأقصى لحجم الصورة",
         );
     }//end get validation messages
 
     private function getFormValidationRules() {
         return array(
             'name'               => 'required|max:99',
-            'icon'               => 'image',
-            'category_id'                => "exists:categories",
+            'image'               => 'image|max:3000',
         );
     }//end get validation rules
 

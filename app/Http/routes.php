@@ -82,13 +82,22 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
     Route::get('admin/cat/{id}/update', 'Admin\CategoryController@edit');
     Route::put('admin/cat/{id}/update', 'Admin\CategoryController@update');
 
-    //news routes
+    //products routes
+    Route::get('admin/products', 'Admin\ProductController@index');
+    Route::get('admin/product/add', 'Admin\ProductController@create');
+    Route::post('admin/product/add', 'Admin\ProductController@store');
+    Route::get('admin/product/{id}/delete', 'Admin\ProductController@destroy');
+    Route::get('admin/product/{id}/update', 'Admin\ProductController@edit');
+    Route::put('admin/product/{id}/update', 'Admin\ProductController@update');
+
+   /* //news routes
     Route::get('admin/news', 'Admin\News@index');
     Route::get('admin/news/add', 'Admin\News@create');
     Route::post('admin/news/add', 'Admin\News@store');
     Route::get('admin/news/{id}/delete', 'Admin\News@destroy');
     Route::get('admin/news/{id}/update', 'Admin\News@edit');
-    Route::put('admin/news/{id}/update', 'Admin\News@update');
+    Route::put('admin/news/{id}/update', 'Admin\News@update');*/
+
     //follows routes
     Route::get('admin/follows', 'Admin\Follows@index');
     Route::get('admin/follows/add', 'Admin\Follows@create');

@@ -41,9 +41,9 @@
 <!-- the fileinput plugin initialization -->
 <script>
     $(document).ready(function(){
-        $('#categories').addClass('active');
+        $('#products').addClass('active');
     });
-    $("#icon").fileinput({
+    $("#image").fileinput({
         overwriteInitial: true,
         showCaption: false,
         showPreview: true,
@@ -76,21 +76,61 @@
                 @include('admin._masters/validation_errors')
 
                 <div class="panel-heading">
-                    <h3 class="panel-title">إضافة تصنيف جديد</h3>
+                    <h3 class="panel-title">إضافة منتج جديد</h3>
                 </div>
 
                 <div class="panel-body">
-                    {!! Form::open( array('id'=>'catForm','url'=>'admin/cat/add',  'enctype'=> 'multipart/form-data'  ))!!}
+                    {!! Form::open( array('id'=>'catForm','url'=>'admin/product/add',  'enctype'=> 'multipart/form-data'  ))!!}
 
 
                     <div class="form-group col-md-6">
-                        <label for="title">اسم التصنيف</label>
+                        <label for="name">اسم المنتج</label>
                         {!! Form::text($name = 'name', null, $attributes = array(
                             'id'=>'name',
                             'class'=>'form-control',
-                            'placeholder'=>'اسم التصنيف',
+                            'placeholder'=>'اسم المنتج',
                             'required'=>'required',
                             'max-length'=>'99'
+                        )) !!}
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="category_id">اختر مشروع متعلق بالخبر</label>
+                        {!! Form::select($name = 'category_id', $categories , null, $attributes = array(
+                                 'id'=>'category_id',
+                                 'class'=>' form-control ',
+                                 'required'=>'required',
+                     )) !!}
+                    </div>
+
+
+                    <div class="form-group col-md-6">
+                        <label for="price">السعر</label>
+                        {!! Form::number($name = 'price', null, $attributes = array(
+                            'id'=>'price',
+                            'class'=>'form-control',
+                            'placeholder'=>'السعر',
+                            'required'=>'required',
+                        )) !!}
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="offer_price">سعر العرض</label>
+                        {!! Form::number($name = 'offer_price', null, $attributes = array(
+                            'id'=>'offer_price',
+                            'class'=>'form-control',
+                            'placeholder'=>'سعر العرض',
+                        )) !!}
+                    </div>
+
+                    <div class="form-group col-md-12">
+                        <label for="offer_price">وصف المنتج</label>
+                        {!! Form::textarea($name = 'description', null, $attributes = array(
+                            'id'=>'description',
+                            'class'=>'form-control',
+                            'placeholder'=>'وصف المنتج',
+                             'required'=>'required',
+
                         )) !!}
                     </div>
 
@@ -99,11 +139,11 @@
                         <div id="kv-avatar-errors" class="center-block" style="width:800px;display:none"></div>
                         <!-- the avatar markup -->
                         <div class="kv-avatar center-block" style="width:200px">
-                            <input id="icon" name="icon" type="file" class="file-loading">
+                            <input id="image" name="image" type="file" class="file-loading">
                         </div>
                     </div>
 
-                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة تصنيف" />
+                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة منتج" />
 
                     {!!Form::close()!!}
                 </div> <!-- end panel body -->
