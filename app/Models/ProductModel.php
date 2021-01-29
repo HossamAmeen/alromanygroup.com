@@ -78,7 +78,7 @@ class ProductModel extends Model {
 //            ->generate(URL::to("product/".$mProduct->id), public_path("products/product".$mProduct->id.".png"));
             ->generate(URL::to("product/".$mProduct->id), base_path()."/products/product".$mProduct->id.".png");
 
-        $mProduct->qr_code = base_path()."/products/product".$mProduct->id.".png";
+        $mProduct->qr_code = URL::to("/products/product".$mProduct->id.".png");
 
         $mProduct->save();
     }//end create product
