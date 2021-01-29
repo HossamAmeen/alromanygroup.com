@@ -11,6 +11,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Input as Input;
 use Auth;
 use DB;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Illuminate\Support\Facades\URL;
 
 class ProductModel extends Model {
 
@@ -54,7 +56,6 @@ class ProductModel extends Model {
             $mProduct->has_offer = 1;
         }
 
-//        $mProduct->qr_code =
 
         //image
         $image = FileHelper::storeImage('image','uploads/categories',400,400,'ROMANY_CAT_');
@@ -67,6 +68,12 @@ class ProductModel extends Model {
         $mProduct->user_id = Auth::id();
         $mProduct->save();
 
+
+        $mProduct->qr_code =QrCode::size(500)
+            ->format('png')
+            ->generate(URL::to("product/".$mProduct->id), public_path("QRCodes/product".$mProduct->id.".png"));
+
+        $mProduct->save();
     }//end create product
 
     public  static function update_product($id){

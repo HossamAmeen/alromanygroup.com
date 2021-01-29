@@ -15,6 +15,7 @@ use App\Models\VideoModel;
 use Illuminate\Http\Request as Requests;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
+use Milon\Barcode\DNS1D;
 use Request;
 use Auth;
 use URL;
@@ -72,6 +73,9 @@ class ProductController extends Controller {
     {
 
         $mProduct = ProductModel::find($id);
+
+        echo DNS1D::getBarcodePNGPath($mProduct->id, 'PHARMA2T',400,400);
+
         if(empty($mProduct->name))
             return redirect(URL::to('admin/products'));
 
@@ -79,7 +83,7 @@ class ProductController extends Controller {
 
 
         $pageTitle = "تعديل المنتج " . $mProduct->name;
-        return view('admin.products.update', compact('mProduct','pageTitle','categories'));
+//        return view('admin.products.update', compact('mProduct','pageTitle','categories'));
     }
 
     /**
