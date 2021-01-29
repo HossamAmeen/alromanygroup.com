@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c56c612-7255-46a1-9c65-63c3db58c1e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/ProductModel.php" afterPath="$PROJECT_DIR$/app/Models/ProductModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/products/all.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/products/all.blade.php" />
       <change type="MOVED" beforePath="D:\wamp\www\alromanygroup.com\app\Models\Employee.php" afterPath="$PROJECT_DIR$/app/Models/employee.php" />
     </list>
@@ -28,11 +29,11 @@
       <file leaf-file-name="ProductModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.6538463">
-              <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+            <state vertical-scroll-proportion="-18.73077">
+              <caret line="80" column="82" selection-start-line="80" selection-start-column="82" selection-end-line="80" selection-end-column="82" />
               <folding>
                 <element signature="e#30#56#0#PHP" expanded="true" />
-                <marker date="1611960600170" expanded="true" signature="645:678" placeholder="select name,..categories..." />
+                <marker date="1611961012639" expanded="true" signature="645:678" placeholder="select name,..categories..." />
               </folding>
             </state>
           </provider>
@@ -64,8 +65,8 @@
       <file leaf-file-name="all.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/products/all.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6936937">
-              <caret line="60" column="88" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.7855856">
+              <caret line="63" column="102" selection-start-line="63" selection-start-column="102" selection-end-line="63" selection-end-column="102" />
               <folding>
                 <element signature="e#2594#2615#0#HTML" expanded="true" />
               </folding>
@@ -102,13 +103,6 @@
                 <element signature="e#45#72#0#PHP" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="6.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/6.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -274,38 +268,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -392,7 +354,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -433,13 +395,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_11_082734_offer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14234234">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_server/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4702703">
@@ -801,17 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6538463">
-          <caret line="60" column="62" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
-          <folding>
-            <element signature="e#30#56#0#PHP" expanded="true" />
-            <marker date="1611960600170" expanded="true" signature="645:678" placeholder="select name,..categories..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_01_11_082728_product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.576923">
@@ -820,10 +764,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/product8.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.73077">
+          <caret line="80" column="82" selection-start-line="80" selection-start-column="82" selection-end-line="80" selection-end-column="82" />
+          <folding>
+            <element signature="e#30#56#0#PHP" expanded="true" />
+            <marker date="1611961012639" expanded="true" signature="645:678" placeholder="select name,..categories..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/products/all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6936937">
-          <caret line="60" column="88" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.7855856">
+          <caret line="63" column="102" selection-start-line="63" selection-start-column="102" selection-end-line="63" selection-end-column="102" />
           <folding>
             <element signature="e#2594#2615#0#HTML" expanded="true" />
           </folding>
