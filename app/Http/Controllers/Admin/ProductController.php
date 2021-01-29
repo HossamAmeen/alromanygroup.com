@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Redirect;
 use Milon\Barcode\DNS1D;
 use Request;
 use Auth;
+use Symfony\Component\HttpFoundation\Response;
 use URL;
 
 class ProductController extends Controller {
