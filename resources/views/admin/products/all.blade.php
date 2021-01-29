@@ -40,6 +40,7 @@
                                                 <th>يوجد عرض</th>
                                                 <th>التصنيف</th>
                                                 <th>صورة المنتج</th>
+                                                <th>QR Code</th>
                                                 <th>تاريخ الإضافة</th>
 
                                                 <th class="text-center">خيارات</th>
@@ -57,6 +58,7 @@
                                                 <td>{{($row->offer_price)?"نعم":"لا"}}</td>
                                                 <td>{{\App\Models\CategoryModel::find($row->category_id)->name}}</td>
                                                 <td><img src="{{URL::asset($row->image)}}" class="img-responsive" style="width: 100px;" /></td>
+                                                <td><img src="{{URL::asset($row->qr_code)}}" class="img-responsive" style="width: 100px;" /></td>
                                                 <td>{{\App\Helpers\DateHelper::print_date($row->created_at)}}</td>
                                                 <td class="text-center">
                                                     <a  href="{{URL::to('admin/product/'.$row->id .'/update')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>
