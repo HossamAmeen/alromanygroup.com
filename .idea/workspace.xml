@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/admin/products/all.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.418018">
-              <caret line="60" column="80" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="80" />
+              <caret line="60" column="88" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
               <folding>
                 <element signature="e#2594#2615#0#HTML" expanded="true" />
               </folding>
@@ -835,7 +835,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/admin/products/all.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.418018">
-          <caret line="60" column="80" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="80" />
+          <caret line="60" column="88" selection-start-line="60" selection-start-column="88" selection-end-line="60" selection-end-column="88" />
           <folding>
             <element signature="e#2594#2615#0#HTML" expanded="true" />
           </folding>
