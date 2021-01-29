@@ -13,12 +13,12 @@ use App\Models\ProductModel;
 use App\Models\ProjectModel;
 use App\Models\VideoModel;
 use Illuminate\Http\Request as Requests;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Milon\Barcode\DNS1D;
 use Request;
 use Auth;
-use Symfony\Component\HttpFoundation\Response;
 use URL;
 
 class ProductController extends Controller {
