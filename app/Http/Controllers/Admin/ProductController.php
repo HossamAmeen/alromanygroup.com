@@ -13,6 +13,8 @@ use App\Models\ProductModel;
 use App\Models\ProjectModel;
 use App\Models\VideoModel;
 use Illuminate\Support\Facades\Response;
+use Illuminate\Http\Request as Requests;
+
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Milon\Barcode\DNS1D;
@@ -56,6 +58,7 @@ class ProductController extends Controller {
      */
     public function store(Requests $request)
     {
+
 
         $this->validate($request, $this->getFormValidationRules(), $this->getFormValidationMessages());
         ProductModel::create_product();
