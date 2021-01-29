@@ -61,7 +61,7 @@
                                                 <td><img src="{{URL::asset($row->qr_code)}}" class="img-responsive" style="width: 100px;" /></td>
                                                 <td>{{\App\Helpers\DateHelper::print_date($row->created_at)}}</td>
                                                 <td class="text-center">
-                                                    <a  href="{{URL::to('product/'.$row->id.'/download_qr_code')}}"><button class="btn btn-xs btn-success" title="تنزيل الباركود"><i class="fa fa-download"></i></button></a>
+                                                    <a  href="{{URL::to('admin/product/'.$row->id.'/download_qr_code')}}"><button class="btn btn-xs btn-success" title="تنزيل الباركود"><i class="fa fa-download"></i></button></a>
 
 
 
