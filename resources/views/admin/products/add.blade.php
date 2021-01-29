@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="category_id">اختر مشروع متعلق بالخبر</label>
+                        <label for="category_id">اختر تصنيف متعلق بالمنتج</label>
                         {!! Form::select($name = 'category_id', $categories , null, $attributes = array(
                                  'id'=>'category_id',
                                  'class'=>' form-control ',

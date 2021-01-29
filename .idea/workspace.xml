@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c56c612-7255-46a1-9c65-63c3db58c1e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/ProductModel.php" afterPath="$PROJECT_DIR$/app/Models/ProductModel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/products/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/products/add.blade.php" />
       <change type="MOVED" beforePath="D:\wamp\www\alromanygroup.com\app\Models\Employee.php" afterPath="$PROJECT_DIR$/app/Models/employee.php" />
     </list>
     <ignored path="elromani.iws" />
@@ -35,14 +35,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductModel.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71531534">
+            <state vertical-scroll-proportion="-15.269231">
               <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
               <folding>
                 <element signature="e#30#56#0#PHP" expanded="true" />
                 <marker date="1611964671540" expanded="true" signature="645:678" placeholder="select name,..categories..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/products/add.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.34234235">
+              <caret line="97" column="73" selection-start-line="97" selection-start-column="73" selection-end-line="97" selection-end-column="73" />
+              <folding>
+                <marker date="1611964754470" expanded="true" signature="3209:3542" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="3221:3540" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="3263:3539" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="3737:4010" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="3751:4008" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="3814:4007" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="4181:4466" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="4195:4464" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="4238:4463" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="4646:4895" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="4660:4893" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="4709:4892" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="5077:5383" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="5093:5381" placeholder="..." />
+                <marker date="1611964754470" expanded="true" signature="5142:5380" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -163,7 +189,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/_masters/side-nav.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/CategoryModel.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_01_11_082728_product.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/products/add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/products/update.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/categories/update.blade.php" />
@@ -174,6 +199,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/products/all.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Models/ProductModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/products/add.blade.php" />
       </list>
     </option>
   </component>
@@ -305,7 +331,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_masters" />
+              <option name="myItemId" value="products" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,54 +396,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alromanygroup.com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -772,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/products/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="145" column="108" selection-start-line="85" selection-start-column="17" selection-end-line="145" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/news/update.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2864865">
@@ -937,11 +908,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71531534">
+        <state vertical-scroll-proportion="-15.269231">
           <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
           <folding>
             <element signature="e#30#56#0#PHP" expanded="true" />
             <marker date="1611964671540" expanded="true" signature="645:678" placeholder="select name,..categories..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/products/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34234235">
+          <caret line="97" column="73" selection-start-line="97" selection-start-column="73" selection-end-line="97" selection-end-column="73" />
+          <folding>
+            <marker date="1611964754470" expanded="true" signature="3209:3542" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="3221:3540" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="3263:3539" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="3737:4010" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="3751:4008" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="3814:4007" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="4181:4466" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="4195:4464" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="4238:4463" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="4646:4895" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="4660:4893" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="4709:4892" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="5077:5383" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="5093:5381" placeholder="..." />
+            <marker date="1611964754470" expanded="true" signature="5142:5380" placeholder="..." />
           </folding>
         </state>
       </provider>
