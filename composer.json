@@ -12,7 +12,7 @@
         "hybridauth/hybridauth": "dev-master",
         "intervention/image":"^2.3",
         "maatwebsite/excel": "~2.1.0",
-        "simplesoftwareio/simple-qrcode": "^4.1",
+        "simplesoftwareio/simple-qrcode": "4.1",
         "ext-imagick": "^3.4"
     },
     "require-dev": {

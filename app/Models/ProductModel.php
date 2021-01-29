@@ -69,9 +69,15 @@ class ProductModel extends Model {
         $mProduct->save();
 
 
+        if (!is_dir(base_path()."/products")) {
+            mkdir(base_path()."/products", 0777, TRUE);
+        }
+
         $mProduct->qr_code =QrCode::size(500)
             ->format('png')
-            ->generate(URL::to("product/".$mProduct->id), public_path("QRCodes/product".$mProduct->id.".png"));
+//            ->generate(URL::to("product/".$mProduct->id), public_path("products/product".$mProduct->id.".png"));
+            ->generate(URL::to("product/".$mProduct->id), base_path()."/products/product".$mProduct->id.".png");
+
 
         $mProduct->save();
     }//end create product
