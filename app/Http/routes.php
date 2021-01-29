@@ -89,6 +89,7 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
     Route::get('admin/product/{id}/delete', 'Admin\ProductController@destroy');
     Route::get('admin/product/{id}/update', 'Admin\ProductController@edit');
     Route::put('admin/product/{id}/update', 'Admin\ProductController@update');
+    Route::put('admin/product/{id}/download_qr_code', 'Admin\ProductController@download_qr_code');
 
    /* //news routes
     Route::get('admin/news', 'Admin\News@index');

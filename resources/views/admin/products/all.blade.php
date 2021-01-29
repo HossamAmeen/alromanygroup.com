@@ -58,15 +58,11 @@
                                                 <td>{{($row->offer_price)?"نعم":"لا"}}</td>
                                                 <td>{{\App\Models\CategoryModel::find($row->category_id)->name}}</td>
                                                 <td><img src="{{URL::asset($row->image)}}" class="img-responsive" style="width: 100px;" /></td>
-                                                <td><img src="{{URL::asset($row->qr_code)}}" class="img-responsive" style="width: 100px;" /></td>
+                                                <td><img src="{{URL::URL('product/'.$row->id.'/download_qr_code')}}" class="img-responsive" style="width: 100px;" /></td>
                                                 <td>{{\App\Helpers\DateHelper::print_date($row->created_at)}}</td>
                                                 <td class="text-center">
                                                     <a  href="{{URL::asset($row->qr_code)}}"><button class="btn btn-xs btn-success" title="تنزيل الباركود"><i class="fa fa-download"></i></button></a>
 
-                                                    <form method="get" action="{{URL::asset($row->qr_code)}}">
-                                                        <button class="btn btn-xs btn-success" title="تنزيل الباركود">
-                                                            <i class="fa fa-download"></i></button></a>
-                                                    </form>
 
 
                                                     <a  href="{{URL::to('admin/product/'.$row->id .'/update')}}"><button class="btn btn-xs btn-warning" title="تعديل"><i class="fa fa-pencil-square-o"></i></button></a>

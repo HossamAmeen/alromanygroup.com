@@ -62,7 +62,15 @@ class ProductController extends Controller {
         return redirect(URL::to('admin/products'));
     }//end store
 
+    public function download_qr_code($id){
 
+        $mProduct = ProductModel::find($id);
+
+        if(empty($mProduct->name))
+            return redirect(URL::to('admin/products'));
+
+        return Response::download($mProduct->qr_code);
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -74,8 +82,6 @@ class ProductController extends Controller {
 
         $mProduct = ProductModel::find($id);
 
-        echo DNS1D::getBarcodePNGPath($mProduct->id, 'PHARMA2T',400,400);
-
         if(empty($mProduct->name))
             return redirect(URL::to('admin/products'));
 
@@ -83,7 +89,7 @@ class ProductController extends Controller {
 
 
         $pageTitle = "تعديل المنتج " . $mProduct->name;
-//        return view('admin.products.update', compact('mProduct','pageTitle','categories'));
+        return view('admin.products.update', compact('mProduct','pageTitle','categories'));
     }
 
     /**
