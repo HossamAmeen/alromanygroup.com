@@ -16,6 +16,7 @@ Route::get('api/get-categories', 'Admin\CategoryController@api_get_categories');
 
 Route::get('api/get-contacts', 'Site\Pages@api_get_contacts');
 Route::get('api/products/{id?}', 'Admin\ProductController@api_get_products');
+Route::get('api/get_single_product/{id}', 'Admin\ProductController@api_get_single_product');
 Route::get('api/offers/{id?}', 'Admin\ProductController@api_get_offers');
 
 

@@ -219,4 +219,26 @@ class ProductController extends Controller {
 
     }//end api get products
 
+    public function api_get_single_product($id)
+    {
+        $mProduct = ProductModel::find($id);
+        $return = [];
+
+        if(empty($mProduct->name)){
+            $return['success'] = false;
+            $return['data'] = null;
+            return $return;
+        }
+
+        $return['success'] = true;
+        $return['data']['name'] = $mProduct->name;
+        $return['data']['description'] = $mProduct->description;
+        $return['data']['price'] = $mProduct->price;
+        $return['data']['offer_price'] = $mProduct->offer_price;
+        $return['data']['has_offer'] = $mProduct->has_offer;
+        $return['data']['image'] = $mProduct->image;
+
+        echo json_encode($return);
+
+    }//end api_get_single_product
 }
