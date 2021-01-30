@@ -11,6 +11,13 @@
 |
 */
 
+Route::post('api/new-application-user','Admin\ApplicationUser@store');
+Route::get('api/get-categories', 'Admin\CategoryController@api_get_categories');
+
+Route::get('api/get-contacts', 'Site\Pages@api_get_contacts');
+Route::get('api/products', 'Site\ProductController@api_get_products');
+
+
 Route::get('/','Site\Pages@home');
 Route::post('/','Site\Pages@post_contact');
 Route::get('products','Site\Pages@products');
@@ -150,7 +157,3 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
 //    Route::get('admin/application-users', 'Admin\ApplicationUser@make_discount');
 });
 
-Route::post('api/new-application-user','Admin\ApplicationUser@store');
-Route::get('api/get-categories', 'Admin\CategoryController@api_get_categories');
-
-Route::get('api/get-contacts', 'Site\Pages@api_get_contacts');
