@@ -171,7 +171,7 @@ class ProductController extends Controller {
         if(!empty($limit)) {
             $query .= "limit $limit ";
         }
-        
+
         if(!empty($offset)){
             $query .= "offset $offset";
         }
