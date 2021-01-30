@@ -76,8 +76,10 @@ class ProductModel extends Model {
         QrCode::size(500)
             ->format('png')
 //            ->generate(URL::to("product/".$mProduct->id), public_path("products/product".$mProduct->id.".png"));
-            ->generate("URL:" . URL::to("product/".$mProduct->id . '\n'
-                      ."Offer Price " . $mProduct->offer_price
+            ->generate("URL:" . URL::to("product/".$mProduct->id . '      '
+                      ."Name " . $mProduct->name . '      '
+                      ."Price " . $mProduct->price . '      '
+                    ."Offer Price " . $mProduct->offer_price 
                 ),
                 base_path()."/products/product".$mProduct->id.".png");
 
