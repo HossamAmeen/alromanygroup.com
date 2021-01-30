@@ -12,6 +12,7 @@ use App\Models\NewsModel;
 use App\Models\ProductModel;
 use App\Models\ProjectModel;
 use App\Models\VideoModel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request as Requests;
 
@@ -153,7 +154,7 @@ class ProductController extends Controller {
     }
 
     public function api_get_products($categoryId = null){
-
+        
         $limit = Input::get('limit');
         $offset = Input::get('offset');
 
