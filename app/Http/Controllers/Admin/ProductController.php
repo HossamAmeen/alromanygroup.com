@@ -154,22 +154,24 @@ class ProductController extends Controller {
     }
 
     public function api_get_products($categoryId = null){
-        
+
         $limit = Input::get('limit');
         $offset = Input::get('offset');
 
 
         $query = "select name, image, description, price, offer_price ";
         $query .= "from product ";
-        $query .= "where active = 0 ";
+        $query .= "where active = 1 ";
 
         if(!empty($categoryId)){
-            $query .="category_id = " . intval($categoryId)." ";
+            $query .="and category_id = " . intval($categoryId)." ";
 
         }
 
-        $query .= "limit $limit ";
-
+        if(!empty($limit)) {
+            $query .= "limit $limit ";
+        }
+        
         if(!empty($offset)){
             $query .= "offset $offset";
         }
