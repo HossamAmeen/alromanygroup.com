@@ -8,6 +8,7 @@ use App\Models\HospitalManagerModel;
 use App\Models\NewsModel;
 use App\Models\OffersImageModel;
 use App\Models\OffersModel;
+use App\Models\PrefsModel;
 use App\Models\ProjectModel;
 use App\Models\UserModel;
 use App\Models\VersionModel;
@@ -94,6 +95,25 @@ class Pages extends Controller {
         $pageTitle = "تواصل معنا";
         return view('site.contact', compact('pageTitle'));
     }//end contact
+
+    public function api_get_contacts()
+    {
+        $mPrefs = PrefsModel::find(1);
+        $return = [];
+        $return['success'] = true;
+        $return['data']['title'] = $mPrefs->title;
+        $return['data']['tel'] = $mPrefs->tel;
+        $return['data']['address'] = $mPrefs->address;
+        $return['data']['email'] = $mPrefs->email;
+        $return['data']['facebook'] = $mPrefs->facebook;
+        $return['data']['twitter'] = $mPrefs->twitter;
+        $return['data']['instagram'] = $mPrefs->instagram;
+        $return['data']['youtube'] = $mPrefs->youtube;
+
+        echo json_encode($return);
+
+    }//end contact
+
 
     public function post_contact(Requests $request){
         $this->validate($request, $this->get_contact_form_validation_rules(), $this->get_contact_form_validation_messages());

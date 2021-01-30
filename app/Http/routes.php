@@ -25,11 +25,6 @@ Route::get('news/{id}','Site\Pages@single_news');
 Route::get('contact','Site\Pages@contact');
 Route::post('contact','Site\Pages@post_contact');
 Route::get('projects','Site\Projects@index');
-Route::get('projects/single/{id}','Site\Projects@single');
-Route::get('faq','site\Questions@index');
-Route::post('faq','site\Questions@question_store');
-Route::get('teams','site\Pages@teams');
-
 
 Route::get('reset-password','Auth\PasswordController@get_email');
 Route::post('password/email','Auth\PasswordController@postEmail');
@@ -158,3 +153,4 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
 Route::post('api/new-application-user','Admin\ApplicationUser@store');
 Route::get('api/get-categories', 'Admin\CategoryController@api_get_categories');
 
+Route::get('api/get-contacts', 'Site\Pages@api_get_contacts');
