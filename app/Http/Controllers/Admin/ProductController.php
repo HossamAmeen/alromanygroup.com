@@ -184,7 +184,39 @@ class ProductController extends Controller {
         echo json_encode($return);
 
 
-    }
+    }//end api get products
 
+    public function api_get_offers($categoryId = null){
+
+        $limit = Input::get('limit');
+        $offset = Input::get('offset');
+
+
+        $query = "select name, image, description, price, offer_price ";
+        $query .= "from product ";
+        $query .= "where active = 1 and has_offer = 1 ";
+
+        if(!empty($categoryId)){
+            $query .="and category_id = " . intval($categoryId)." ";
+
+        }
+
+        if(!empty($limit)) {
+            $query .= "limit $limit ";
+        }
+
+        if(!empty($offset)){
+            $query .= "offset $offset";
+        }
+
+        $results = DB::select($query);
+
+        $return = [];
+        $return['success'] = true;
+        $return['data'] = $results;
+        echo json_encode($return);
+
+
+    }//end api get products
 
 }
