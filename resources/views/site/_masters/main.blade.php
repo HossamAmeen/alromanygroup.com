@@ -37,7 +37,7 @@
                         <a href="{{\App\Models\PrefsModel::get_facebook_value()}}"><span class="fa fa-facebook"></span></a>
                         <a href="{{\App\Models\PrefsModel::get_twitter_value()}}"><span class="fa fa-twitter"></span></a>
                         <a href="{{\App\Models\PrefsModel::get_instagram_value()}}"><span class="fa fa-instagram"></span></a>
-                        <a href="{{--{{\App\Models\PrefsModel::get_youtube_value()}}--}}"><span class="fa fa-youtube"></span></a>
+                        <a href="{{\App\Models\PrefsModel::get_youtube_value()}}"><span class="fa fa-youtube"></span></a>
 {{--
                         <a href="#"><span class="fa fa-android"></span></a>
 --}}

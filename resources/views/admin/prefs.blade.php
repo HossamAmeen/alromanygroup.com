@@ -256,11 +256,11 @@
                         </div>
 
                             <div class="form-group col-md-6">
-                            <label for="facebook">رابط  تويتر </label>
-                            {!! Form::url($name = 'twitter', null, $attributes = array(
-                                'id'=>'twitter',
+                            <label for="instagram">رابط الانستجرام</label>
+                            {!! Form::url($name = 'instagram', null, $attributes = array(
+                                'id'=>'instagram',
                                 'class'=>'form-control',
-                                'placeholder'=>'رابط تويتر',
+                                'placeholder'=>'رابط الانستجرام',
                                 'max-length'=>'99'
 
 

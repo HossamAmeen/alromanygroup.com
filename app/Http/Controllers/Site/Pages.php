@@ -126,24 +126,7 @@ class Pages extends Controller {
         );
     }
 
-    public function services(){
-        $pageTitle = "خدمات المكتب";
-        return view('site.services',compact('pageTitle'));
 
-    }
 
-    public function portfolio(){
-        $works = WorkModel ::where('active','=','1')->orderBy('id','desc')->get();
-        $pageTitle = "سابقة الأعمال";
-        $types = WorkModel::get_types_array();
-        return view('site.portfolio',compact('works','pageTitle','types'));
-
-    }
-
-    public function teams(){
-        $pageTitle = "فريق عمل الديار";
-
-        return view('site.teams',compact('pageTitle'));
-    }
 
 }//end pages

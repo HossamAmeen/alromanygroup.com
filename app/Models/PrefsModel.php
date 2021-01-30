@@ -69,9 +69,9 @@ class PrefsModel extends Model {
         return $mPrefs->dribbble;
     }//end dribbble value
 
-    public static function get_google_value(){
+    public static function get_youtube_value(){
         $mPrefs = PrefsModel::find(1);
-        return $mPrefs->google;
+        return $mPrefs->youtube;
     }//end google value
     public static function get_pinterest_value(){
         $mPrefs = PrefsModel::find(1);

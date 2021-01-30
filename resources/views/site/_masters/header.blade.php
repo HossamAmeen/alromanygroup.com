@@ -35,7 +35,7 @@
 <meta property="og:locale" content="ar_AR" />
 <meta property="og:title" content="{{$pageTitle}}" />
 <meta property="og:type" content="article" />
-<meta property="og:description" content="الموقع الرسمي لمكتب الديار الهندسي" />
+<meta property="og:description" content="{{\App\Models\PrefsModel::get_slogan_value()}}">
 <meta property="og:site_name" content="{{\App\Models\PrefsModel::get_title_value()}}" />
 <meta property="article:publisher" content=https://www.facebook.com/ZedyDigitalAgency/" />
 <meta property="article:author" content="https://www.facebook.com/ZedyDigitalAgency/">
