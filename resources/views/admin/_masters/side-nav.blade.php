@@ -62,13 +62,13 @@
 
                         <li><a id="managers" href="{{URL::to('admin/faq')}}"><span> <i class="fa fa-question"></i>أسئلة واجابات </span></a></li>--}}
 
-            <li>
+  {{--          <li>
                 <a id="offers" href="#"> <i class="fa fa-suitcase"></i> <span>العروض</span></a>
                 <ul>
                     <li><a href="{{URL::to('admin/offers/add')}}"><span>إضافة عرض</span></a></li>
                     <li><a href="{{URL::to('admin/offers')}}"><span>كل العروض</span></a></li>
                 </ul>
-            </li>
+            </li>--}}
 
             <li>
                 <a id="categories" href="#"> <i class="fa fa-address-card"></i> <span>التصنيفات</span></a>
