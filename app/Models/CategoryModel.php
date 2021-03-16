@@ -23,8 +23,8 @@ class CategoryModel extends Model {
 //        $query .= "order by id ";
 
         $results = DB::select($query);
-        if(!empty($results[0])){
-            foreach($results[0] as $key => $row){
+        if(!empty($results)){
+            foreach($results as $key => $row){
                 $data[$key]['name'] = $row->name;
                 $data[$key]['icon'] = $row->icon;
             }

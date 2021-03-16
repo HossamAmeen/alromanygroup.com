@@ -30,7 +30,7 @@ class CategoryController extends Controller {
      */
     public function index()
     {
-        $cats = CategoryModel::where('active','=','1')->orderBy('id','desc')->get();
+           $cats = CategoryModel::where('active','=','1')->orderBy('id','desc')->get();
         $pageTitle = "كل التصنيفات";
         return view('admin.categories.all', compact('cats','pageTitle'));
     }
