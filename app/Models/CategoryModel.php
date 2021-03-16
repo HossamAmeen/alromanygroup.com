@@ -20,11 +20,11 @@ class CategoryModel extends Model {
     public static function get_categories_names_and_icons(){
         $query = "select name, icon from categories ";
         $query .= "where active = 1 ";
-        $query .= "order by id ";
+//        $query .= "order by id ";
 
         $results = DB::select($query);
-        if(!empty($results)){
-            foreach($results as $key => $row){
+        if(!empty($results[0])){
+            foreach($results[0] as $key => $row){
                 $data[$key]['name'] = $row->name;
                 $data[$key]['icon'] = $row->icon;
             }
