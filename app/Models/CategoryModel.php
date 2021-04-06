@@ -18,13 +18,14 @@ class CategoryModel extends Model {
     protected $table = 'categories';
 
     public static function get_categories_names_and_icons(){
-        $query = "select name, icon from categories ";
+        $query = "select id, name, icon from categories ";
         $query .= "where active = 1 ";
 //        $query .= "order by id ";
 
         $results = DB::select($query);
         if(!empty($results)){
             foreach($results as $key => $row){
+                $data[$key]['id'] = $row->id;
                 $data[$key]['name'] = $row->name;
                 $data[$key]['icon'] = $row->icon;
             }

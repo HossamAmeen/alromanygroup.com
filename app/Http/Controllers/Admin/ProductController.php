@@ -181,6 +181,9 @@ class ProductController extends Controller {
         $return = [];
         $return['success'] = true;
         $return['data'] = $results;
+
+
+//        echo json_encode($query);
         echo json_encode($return);
 
 
