@@ -140,7 +140,7 @@ class ProductController extends Controller {
     private function getFormValidationRules() {
         return array(
             'name'               => 'required|max:99',
-            'image'               => 'image|required',
+            'image'               => 'image',
         );
     }//end get validation rules
 
