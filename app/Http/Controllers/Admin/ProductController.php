@@ -195,7 +195,7 @@ class ProductController extends Controller {
         $offset = Input::get('offset');
 
 
-        $query = "select name, image, description, price, offer_price ";
+        $query = "select id, name, image, description, price, offer_price ";
         $query .= "from product ";
         $query .= "where active = 1 and has_offer = 1 ";
 
