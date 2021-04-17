@@ -38,11 +38,10 @@
                                                 <th>#</th>
                                                 <th>اسم العميل
                                                 </th>
-                                                <th>الوظيفة</th>
+                                                <th>العنوان</th>
                                                 <th>الهاتف</th>
                                                 <th>الايميل</th>
                                                 <th>تاريخ التسجيل</th>
-                                                <th>Mac Address</th>
                                                 <th>رقم النسخة</th>
                                                 <th class="text-center">تاريخ الحصول على الخصم</th>
                                             </tr>
@@ -57,7 +56,6 @@
                                                 <td>{{$row->tel}}</td>
                                                 <td>{{$row->email}}</td>
                                                 <td>{{$row->created_at}}</td>
-                                                <td>{{$row->macAddress}}</td>
                                                 <td>{{$row->user_no}}</td>
                                              @if(empty($row->discount_datetime))
                                                 <td>
