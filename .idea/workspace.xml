@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c56c612-7255-46a1-9c65-63c3db58c1e0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/ProductModel.php" afterPath="$PROJECT_DIR$/app/Models/ProductModel.php" />
       <change type="MOVED" beforePath="D:\wamp\www\alromanygroup.com\app\Models\Employee.php" afterPath="$PROJECT_DIR$/app/Models/employee.php" />
     </list>
     <ignored path="elromani.iws" />
@@ -25,16 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="all.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/app-users/all.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-37.923077">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ApplicationUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ApplicationUser.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -87,6 +78,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ProductModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.7307693">
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+              <folding>
+                <marker date="1618785012333" expanded="true" signature="645:678" placeholder="select name,..categories..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="EquivalentController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EquivalentController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,8 +123,8 @@
       <file leaf-file-name="ProductController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81621623">
-              <caret line="220" column="31" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.36501902">
+              <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
               <folding>
                 <element signature="e#45#72#0#PHP" expanded="true" />
               </folding>
@@ -181,12 +184,12 @@
         <option value="$PROJECT_DIR$/app/Models/PrefsModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Site/Pages.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-        <option value="$PROJECT_DIR$/app/Models/ProductModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Models/CategoryModel.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/app-users/all.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ApplicationUser.php" />
+        <option value="$PROJECT_DIR$/app/Models/ProductModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" />
       </list>
     </option>
@@ -795,16 +798,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="64" selection-start-line="78" selection-start-column="64" selection-end-line="78" selection-end-column="64" />
-          <folding>
-            <marker date="1612042887756" expanded="true" signature="-1:-1" placeholder="select name,..categories..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Helpers/DateHelper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -914,10 +907,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ProductModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7307693">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding>
+            <marker date="1618785012333" expanded="true" signature="645:678" placeholder="select name,..categories..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81621623">
-          <caret line="220" column="31" selection-start-line="220" selection-start-column="31" selection-end-line="220" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.36501902">
+          <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
           <folding>
             <element signature="e#45#72#0#PHP" expanded="true" />
           </folding>

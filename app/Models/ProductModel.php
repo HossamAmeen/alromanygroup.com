@@ -100,6 +100,7 @@ class ProductModel extends Model {
 
         if(!empty(Input::get('offer_price')) && Input::get('offer_price') != 0){
             $mProduct->offer_price = Input::get('offer_price');
+            $mProduct->has_offer = 1;
         }else{
             $mProduct->offer_price = 0;
             $mProduct->has_offer = 0;
