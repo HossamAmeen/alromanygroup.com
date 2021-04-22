@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\{Employee ,Client, Project ,ProjectConfigration};
+use App\Models\{Employee ,Client, Project};
 use Auth;
 class ProjectController extends Controller
 {

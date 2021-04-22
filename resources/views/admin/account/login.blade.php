@@ -142,7 +142,7 @@
         </div>
     </div>
     <p class="copy-right big-screen hidden-xs hidden-sm">
-         {{\App\Models\PrefsModel::get_title_value()}} <span class="footer-year">2017</span> <span>&#169;</span>
+         {{\App\Models\PrefsModel::get_title_value()}} <span class="footer-year">2021</span> <span>&#169;</span>
     </p>
 </section>
 
