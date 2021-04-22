@@ -72,8 +72,8 @@ class ProductController extends Controller {
 
         if(empty($mProduct->name))
             return redirect(URL::to('admin/products'));
-
-        return \Response::download($mProduct->qr_code);
+        
+        return \Response::download(URL::to($mProduct->qr_code));
     }
     /**
      * Show the form for editing the specified resource.
