@@ -120,7 +120,7 @@ Route::group(['middleware' => ['checkSuperVisor']], function () {
     Route::resource('admin/projects', 'Admin\ProjectController');
     Route::get('admin/projects/{id}/delete', 'Admin\ProjectController@destroy');
         ///////////////////// project
-    Route::any('admin/project-configration', 'Admin\ProjectController@configration');
+    Route::any('admin/project-configuration', 'Admin\ProjectController@configuration');
         //////////////////// Equivalent
     Route::resource('admin/equivalents', 'Admin\EquivalentController');
     Route::get('admin/equivalents/{id}/delete', 'Admin\EquivalentController@destroy');

@@ -27,6 +27,7 @@ class EmployeeController extends Controller
 //        $query .= " , sum(eq.value) as total_equivalents ";
 
         $query .= "from employees e ";
+//        $query .= ", projects p ";
 
         $query .= "left Join projects p ";
         $query .= "on e.id = p.employee_id  ";
@@ -44,7 +45,6 @@ class EmployeeController extends Controller
         $items = DB::select($query);
 
         Equivalent::add_total_equivalents($items);
-//        dd($items);
 
         $pageTitle = "كل الفنيين";
         $configration = \App\Models\ProjectConfigration::find(1);

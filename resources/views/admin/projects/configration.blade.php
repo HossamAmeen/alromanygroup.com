@@ -73,7 +73,7 @@
 <!-- the fileinput plugin initialization -->
 <script>
     $(document).ready(function(){
-        $('#project-configration').addClass('active');
+        $('#project-configuration').addClass('active');
     });
 
 
@@ -153,7 +153,7 @@
         </div>
 
         	 <div class="panel-body">
-        	 {!! Form::model( $item ,array('id'=>'newsForm','url'=>'admin/project-configration','method' => 'post', 'enctype'=> 'multipart/form-data') )!!}
+        	 {!! Form::model( $item ,array('id'=>'newsForm','url'=>'admin/project-configuration','method' => 'post', 'enctype'=> 'multipart/form-data') )!!}
 
 
              

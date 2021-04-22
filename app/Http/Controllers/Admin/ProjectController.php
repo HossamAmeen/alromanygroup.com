@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\ProjectConfigration;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -140,7 +141,7 @@ class ProjectController extends Controller
 
         return redirect('admin/projects');
     }
-    public function configration(Request $request)
+    public function configuration(Request $request)
     {
         $item = ProjectConfigration::find(1);
         if($request->isMethod('post'))
