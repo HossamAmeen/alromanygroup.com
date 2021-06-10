@@ -103,33 +103,8 @@
                     </div>
 
                     <div class="col-sm-12 forms">
-                        <div class="col-sm-8">
-                            {{Form::open(['id'=>'contact-form'])}}
 
-                            <div class="hide success-contact col-xs-12 alert alert-success">تم إرسال الرسالة بنجاح</div>
-                            <div class="hide error-contact col-xs-12 alert alert-danger">هناك خطأ ما، رجاء المحاولة لاحقا</div>
-
-                           {{-- {{Form::open(array('url'=>'contact', 'id'=>'contactForm'))}}
-                            @include('admin._masters.validation_errors')--}}
-                                <div class="col-sm-6 wow bounceInDown">
-                                    <input type="text" name="name" id="name" placeholder="الإسم*" required="required">
-                                </div>
-                                <div class="col-sm-6 wow bounceInLeft">
-                                    <input type="email" name="email" id="email" placeholder="البريد الأليكترونى*" required="required">
-                                </div>
-                                <div class="col-sm-12 wow bounceInRight">
-                                    <input type="text" name="subject" id="subject" placeholder="عنوان الرسالة*" required="required">
-                                </div>
-                                <div class="col-sm-12 wow bounceInLeft">
-                                    <textarea name="msg" id="msg" placeholder="الرسالة*" required="required"></textarea>
-                                </div>
-                                <div class="col-sm-12 wow bounceInDown">
-                                    <input id="send-btn" type="submit" value="إرسل">
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="col-sm-4 map">
+                        <div class="col-sm-12 map">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.988353369441!2d31.210598585517083!3d30.065868324516483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584119770584d1%3A0x301b5dd863eb0ca3!2z2KXYqNmGINiu2YTYr9mI2YbYjCDZhdiv2YrZhtipINin2YTYo9i52YTYp9mF2Iwg2KfZhNi52KzZiNiy2KnYjCDYp9mE2KzZitiy2Kk!5e0!3m2!1sar!2seg!4v1472759359383" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
