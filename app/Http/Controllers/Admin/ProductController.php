@@ -69,11 +69,17 @@ class ProductController extends Controller {
     public function download_qr_code($id){
 
         $mProduct = ProductModel::find($id);
-
         if(empty($mProduct->name))
             return redirect(URL::to('admin/products'));
-        
-        return \Response::download(URL::to($mProduct->qr_code));
+//        ex: http://www.alromanygroup.com/products/product220.png
+//        return \Response::download(URL::to($mProduct->qr_code));
+//        return Storage (URL::to($mProduct->qr_code));
+
+        $filename = $mProduct->name;
+        $tempImage = tempnam(sys_get_temp_dir(), $filename. "_qr_code");
+        copy(URL::to($mProduct->qr_code), $tempImage);
+        return response()->download($tempImage, $filename);
+
     }
     /**
      * Show the form for editing the specified resource.
