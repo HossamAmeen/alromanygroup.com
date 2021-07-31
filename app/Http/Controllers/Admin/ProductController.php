@@ -75,7 +75,7 @@ class ProductController extends Controller {
 //        return \Response::download(URL::to($mProduct->qr_code));
 //        return Storage (URL::to($mProduct->qr_code));
 
-        $filename = $mProduct->qr_code;
+        $filename = $mProduct->name . ".png";
         $tempImage = tempnam(sys_get_temp_dir(), $filename);
         copy(URL::to($mProduct->qr_code), $tempImage);
         return response()->download($tempImage, $filename);
