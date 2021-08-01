@@ -22,14 +22,17 @@ class EmployeeController extends Controller
     {
 //        $items = Employee::where('active','=','1')->orderBy('id','desc')->get();
 //        dd ($items);
-        $query = "select e.id, e.name, e.job, e.address, e.phone, count(p.id) as total_operations , count(p.id) as total_operations ";
-        $query .= ",sum(bill_value) as total_sales,  e.created_at ";
+        //count(p.id) as total_operations
+        //sum(bill_value) as total_sales
+
+        $query = "select e.id, e.name, e.job, e.address, e.phone   ";
+        $query .= ",  e.created_at ";
 //        $query .= " , sum(eq.value) as total_equivalents ";
 
         $query .= "from employees e ";
 //        $query .= ", projects p ";
 
-        $query .= "left Join projects p ";
+        $query .= "right Join projects p ";
         $query .= "on e.id = p.employee_id  ";
 
 //        $query .= "left Join equivalents eq ";
@@ -43,6 +46,7 @@ class EmployeeController extends Controller
 
 
         $items = DB::select($query);
+
 
         Equivalent::add_total_equivalents($items);
 

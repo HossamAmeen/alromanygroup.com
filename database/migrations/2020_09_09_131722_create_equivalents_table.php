@@ -15,6 +15,7 @@ class CreateEquivalentsTable extends Migration
         Schema::create('equivalents', function (Blueprint $table) {
             $table->increments('id');
             $table->double('value');
+            $table->integer('points');
             // $table->boolean('is_taken')->default(0);
             $table->boolean('active')->default(1);
 

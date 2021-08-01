@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Employee;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Models\{Employee , Equivalent ,ProjectConfigration};
+use App\Models\{ Equivalent ,ProjectConfigration};
 use Auth;
 class EquivalentController extends Controller
 {
@@ -31,12 +32,15 @@ class EquivalentController extends Controller
     {
                // $default = ['0'=>'لايوجد'];
         $employee = Employee::where('active','=','1')->where('id',request('employeeId'))->first();
+        $equivalents = Employee::get_employee_last_equivalents($employee->id);
         // $clients = Client::all()->pluck('title','id')->toArray();
         // $items = $default + $items;
        // dd($equivalents);
        $pageTitle = " صرف مكافئة ل " . $employee->name;
        $configration = ProjectConfigration::find(1);
-        return view('admin.equivalents.add', compact('pageTitle' , 'employee','configration'));
+        return view('admin.equivalents.add', compact('pageTitle' , 'employee','configration','equivalents'));
+
+
 
     }//end store
 
@@ -47,12 +51,14 @@ class EquivalentController extends Controller
      */
     public function store(Request $request)
     {
+        $pull_ratio = ProjectConfigration::get_pull_ratio();
         // $this->validate($request, $this->getFormValidationRules(), $this->getFormValidationMessages());
         //$thumbnail = FileHelper::storeImage('img','uploads/news',320,180,'ZM_');
         // return $request->name;
        $item =  new Equivalent();
-       $item->value =$request->value ;
-      
+       $item->points =$request->points ;
+       $item->value =intval($request->points *  $pull_ratio / 100) ;
+
     //    return $request->employeeId ;
     //    if($request->employee_id != 0){
                 // return "test";
@@ -63,7 +69,7 @@ class EquivalentController extends Controller
     //        return redirect()->back()->withInput();
     //    }
        $configration = ProjectConfigration::find(1);
-       if( $request->value < $configration->minimum   ) {
+       if( $request->points < $configration->minimum   ) {
         return redirect()->back()->withErrors(['error' => "قيمه الصرف اقل من الحد الادني "])->withInput();    
        }
       

@@ -19,6 +19,17 @@ class Employee extends Model
             return $results[0]->total_equivalent;
 
     }
+    public static function get_employee_last_equivalents($employeeId){
+        $query = 'select created_at,points,value from equivalents ';
+        $query .= "where employee_id = $employeeId  " ;
+        $query .= "order by id desc  " ;
+        $results = DB::select($query);
+        if(empty($results[0]))
+            return null;
+        else
+            return $results;
+
+    }
 
 
     public function get_total_projects_bill_values(){

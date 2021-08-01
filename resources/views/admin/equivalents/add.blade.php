@@ -182,7 +182,7 @@
                    
                     <div class="form-group col-md-6">
                         <label >عدد نقاط السحب</label>
-                        <input type="number" name="value" class="form-control" onchange="getRewardValue()" id="rewardValue" required>
+                        <input type="number" name="points" class="form-control" onchange="getRewardValue()" id="rewardValue" required>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
                             'class'=>'form-control',
@@ -230,6 +230,46 @@
 
                     {!!Form::close()!!}
                 </div> <!-- end panel body -->
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">المكافأت السابقة للفني  {{$employee->name}}</h3>
+                </div>
+
+                <div class="panel-body">
+                    {!! Form::open( array('id'=>'newsForm','url'=>'admin/equivalents?employeeId='.$employee->id,  'enctype'=> 'multipart/form-data'  ))!!}
+
+                    <div class="table-responsive ls-table">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th> تاريخ الصرف</th>
+                                <th>عدد النقاط</th>
+                                <th>قيمة المكافأة</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            @foreach($equivalents as $index => $row)
+                                <tr>
+                                    <td>{{($index+1)}}</td>
+                                    <td>{{\App\Helpers\DateHelper::print_date($row->created_at)}}</td>
+                                    <td>{{$row->points}}</td>
+                                    <td>{{$row->value}}</td>
+
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+
+                    {!!Form::close()!!}
+                </div> <!-- end panel body -->
+
             </div> <!-- /. end panel default -->
 
         </div> <!-- /. end row -->

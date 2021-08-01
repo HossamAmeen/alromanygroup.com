@@ -116,10 +116,10 @@
                                                 <td>{{$row->created_at}}</td>
                                                 <td>{{$row->total_operations}}</td>
                                                 <td>{{$row->total_sales}}</td>
-                                                <td>{{$row->total_sales}}</td>
-                                                <td>{{$row->total_equivalents}}</td>
                                                 <td>{{$row->total_points}}</td>
-                                                <td>{{$row->total_sales - $row->total_points}}</td>
+                                                <td>{{$row->total_equivalents}}</td>
+                                                <td>{{$row->total_equivalent_points}}</td>
+                                                <td>{{$row->total_points - $row->total_equivalent_points}}</td>
                                                 <td>
                                                     <a  href="{{URL::to('admin/equivalents/create?employeeId='.$row->id)}}"><button class="btn btn-xs btn-success" title="صرف مكافأة">صرف</button></a>
                                                 </td>

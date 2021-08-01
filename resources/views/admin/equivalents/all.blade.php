@@ -100,7 +100,7 @@
                                             @foreach($items as $index => $row)
                                             <tr>
                                                 <td>{{($index+1)}}</td>
-                                                <td>{{$row->employee->name??" "}}</td>
+                                                <td>{{$row->employee->name}}</td>
                                                 <td>{{$row->value}}</td>
                                                 <td>{{$row->created_at}}</td>
                                                 <td class="text-center">
