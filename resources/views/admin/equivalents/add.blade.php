@@ -198,9 +198,11 @@
                   
                     <div class="form-group col-md-6">
                         <label >نقاط متاحة للسحب</label>
-                        <input class="form-control" 
-                        {{--value="{{$employee->projects->sum('bill_value') - $employee->disbursedRewards->sum('value')}}"
-                        readonly>--}}
+                        <input class="form-control"
+
+
+                      value="{{$employee->projects->sum('bill_value') - $employee->disbursedsewards->sum('value')}}"
+                        readonly>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
                             'class'=>'form-control',

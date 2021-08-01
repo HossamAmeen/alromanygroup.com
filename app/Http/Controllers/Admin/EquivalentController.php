@@ -29,8 +29,7 @@ class EquivalentController extends Controller
      */
     public function create()
     {
-       
-        // $default = ['0'=>'لايوجد'];
+               // $default = ['0'=>'لايوجد'];
         $employee = Employee::where('active','=','1')->where('id',request('employeeId'))->first();
         // $clients = Client::all()->pluck('title','id')->toArray();
         // $items = $default + $items;
