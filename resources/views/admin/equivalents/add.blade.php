@@ -200,7 +200,8 @@
                         <label >نقاط متاحة للسحب</label>
                         <input class="form-control"
 
-                      value="{{$employee->projects->sum('bill_value') - $employee->get_total_equivalent()}}"
+                               {{--$employee->projects->sum('bill_value') ---}}
+                      value="{{ $employee->get_total_equivalent()}}"
                         readonly>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
