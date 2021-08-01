@@ -42,7 +42,7 @@ class EmployeeController extends Controller
         $query .= "where e.active = 1  ";
 
 //        $query .= "GROUP BY e.id  ";
-//        $query .= "order by e.name  ";
+        $query .= "order by name  ";
 
 
         $items = DB::select($query);

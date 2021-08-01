@@ -201,7 +201,8 @@
                         <input class="form-control"
 
                                {{--$employee->projects->sum('bill_value') ---}}
-                      value="{{ $employee->get_total_projects_bill_values() -  $employee->get_total_equivalent()}}"
+
+                      value="{{ $employee->get_total_projects_bill_values() -  $employee->get_total_equivalents_points()}}"
                         readonly>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
@@ -261,7 +262,7 @@
                                 </tr>
                             @endforeach
                             @endif
-                            
+
                             </tbody>
                         </table>
                     </div>

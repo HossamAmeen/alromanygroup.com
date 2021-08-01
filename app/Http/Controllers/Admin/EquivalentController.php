@@ -74,7 +74,7 @@ class EquivalentController extends Controller
        }
       
         $employee= Employee::find($request->employeeId);
-        if(($employee->get_total_projects_bill_values() - $employee->get_total_equivalent() ) >=  $request->value)
+        if( ($employee->get_total_projects_bill_values() -  $employee->get_total_equivalents_points() ) >=  $request->value)
         {
             $item->user_id =  Auth::id();
             $item->save();

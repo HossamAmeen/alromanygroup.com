@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\DB;
 class Employee extends Model
 {
 
-    public function get_total_equivalent(){
-        $query = 'select sum(value) as total_equivalent from equivalents ';
+    public function get_total_equivalents_points(){
+        $query = 'select sum(points) as total_equivalent_points from equivalents ';
         $query .= 'where employee_id =  ' . $this->id ;
         $results = DB::select($query);
         if(empty($results[0]))
             return 0;
         else
-            return $results[0]->total_equivalent;
+            return $results[0]->total_equivalent_points ;
 
     }
     public static function get_employee_last_equivalents($employeeId){
