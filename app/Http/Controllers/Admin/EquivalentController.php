@@ -74,7 +74,7 @@ class EquivalentController extends Controller
             $item->user_id =  Auth::id();
             $item->save();
             
-            return redirect('admin/equivalents/create?employeeId='.$employee->id)->with(['addAction' => "تم صرف المكافئ بنجاح"]);
+            return redirect('admin/equivalents/create?employeeId='.$employee->id)->with(['addAction' => "تم صرف المكافأة بنجاح"]);
         }
         else
         { 

@@ -152,12 +152,11 @@
                   
                     <div class="form-group col-md-6">
                         <label for="title">تاريخ الشراء</label>
-                        {!! Form::date($name = 'date', null, $attributes = array(
+                        {!! Form::date($name = 'date', date('Y-m-d'), $attributes = array(
                             'id'=>'title',
                             'class'=>'form-control',
                             'placeholder'=>'تاريخ الشراء',
                             'required'=>'required',
-                            'max-length'=>'99'
                         )) !!}
                     </div>
                     <div class="form-group col-md-6">
@@ -199,7 +198,7 @@
                      )) !!}
                     </div>
 
-                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة مشروع" />
+                    <input type="submit" class="col-md-offset-3 col-md-6 btn btn-info" value="إضافة عملية شراء"/>
 
                     {!!Form::close()!!}
                 </div> <!-- end panel body -->
