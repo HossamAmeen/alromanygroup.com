@@ -14,11 +14,25 @@ class Employee extends Model
         $query .= 'where employee_id =  ' . $this->id ;
         $results = DB::select($query);
         if(empty($results[0]))
-            return 'empty';
+            return 0;
         else
             return $results[0]->total_equivalent;
 
     }
+
+
+    public function get_total_projects_bill_values(){
+        $query = 'select sum(bill_value) as total_projects_bill_values from projects ';
+        $query .= 'where employee_id =  ' . $this->id ;
+        $results = DB::select($query);
+        if(empty($results[0]))
+            return 0;
+        else
+            return $results[0]->total_projects_bill_values;
+
+    }
+
+
     public function disbursedRewards()
     {
         return $this->hasMany(Equivalent::class)->where('active','=','1');
