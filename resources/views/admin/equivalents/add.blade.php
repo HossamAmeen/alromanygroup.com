@@ -181,7 +181,7 @@
 
                    
                     <div class="form-group col-md-6">
-                        <label >عدد النقاط</label>
+                        <label >عدد نقاط السحب</label>
                         <input type="number" name="value" class="form-control" onchange="getRewardValue()" id="rewardValue" required>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             
@@ -200,8 +200,7 @@
                         <label >نقاط متاحة للسحب</label>
                         <input class="form-control"
 
-
-                      value="{{$employee->projects->sum('bill_value') - $employee->equivalents->sum('value')}}"
+                      value="{{$employee->projects->sum('bill_value') - $employee->get_total_equivalent()}}"
                         readonly>
                         {{-- {!! Form::number($name = 'value', null, $attributes = array(
                             

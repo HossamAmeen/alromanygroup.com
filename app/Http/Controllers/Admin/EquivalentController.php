@@ -68,12 +68,13 @@ class EquivalentController extends Controller
        }
       
         $employee= Employee::find($request->employeeId);
-        if(($employee->projects->sum('bill_value') - $employee->disbursedRewards->sum('value') ) >=  $request->value)
+        if(($employee->projects->sum('bill_value') - $employee->get_total_equivalent() ) >=  $request->value)
         {
             $item->user_id =  Auth::id();
             $item->save();
             
-            return redirect('admin/equivalents/create?employeeId='.$employee->id)->with(['addAction' => "تم صرف المكافأة بنجاح"]);
+            return redirect('admin/equivalents/create?employeeId='.$employee->id)
+                ->with(['addAction' => "تم صرف المكافأة بنجاح"]);
         }
         else
         { 
