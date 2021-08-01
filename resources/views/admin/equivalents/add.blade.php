@@ -250,6 +250,7 @@
                             </thead>
                             <tbody>
 
+                            @if(is_array($equivalents))
                             @foreach($equivalents as $index => $row)
                                 <tr>
                                     <td>{{($index+1)}}</td>
@@ -259,6 +260,8 @@
 
                                 </tr>
                             @endforeach
+                            @endif
+                            
                             </tbody>
                         </table>
                     </div>

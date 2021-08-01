@@ -46,8 +46,7 @@ class Equivalent extends Model
 //                dd($results);
             }
             else {
-                $employee->total_points = $employees->total_sales = 0;
-                $employee->total_equivalents = 0;
+                $employee->total_points = $employee->total_sales = 0;
                 $employee->total_operations = 0;
             }
 

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c56c612-7255-46a1-9c65-63c3db58c1e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2020_09_09_131722_create_equivalents_table.php" afterPath="$PROJECT_DIR$/database/migrations/2020_09_09_131722_create_equivalents_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Employee.php" afterPath="$PROJECT_DIR$/app/Models/Employee.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Equivalent.php" afterPath="$PROJECT_DIR$/app/Models/Equivalent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/EquivalentController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/EquivalentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/equivalents/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/equivalents/add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/employees/all.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/employees/all.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/equivalents/all.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/equivalents/all.blade.php" />
     </list>
     <ignored path="elromani.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +52,7 @@
       <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.653846">
+            <state vertical-scroll-proportion="-17.653847">
               <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
               <folding>
                 <marker date="1627789832652" expanded="true" signature="210:264" placeholder="select sum(v..equivalents..." />
@@ -70,8 +66,8 @@
       <file leaf-file-name="EmployeeController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.115385">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+            <state vertical-scroll-proportion="-17.653847">
+              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -80,10 +76,10 @@
       <file leaf-file-name="Equivalent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Equivalent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.346153">
-              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state vertical-scroll-proportion="-17.23077">
+              <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
               <folding>
-                <marker date="1627788745520" expanded="true" signature="762:871" placeholder="select count..projects..." />
+                <marker date="1627790342814" expanded="true" signature="762:871" placeholder="select count..projects..." />
               </folding>
             </state>
           </provider>
@@ -104,8 +100,8 @@
       <file leaf-file-name="add.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/equivalents/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6304348">
-              <caret line="255" column="95" selection-start-line="255" selection-start-column="95" selection-end-line="255" selection-end-column="95" />
+            <state vertical-scroll-proportion="0.7844203">
+              <caret line="263" column="28" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
               <folding>
                 <element signature="e#5843#5976#0#HTML" expanded="false" />
                 <element signature="e#5994#8636#0#HTML" expanded="false" />
@@ -165,13 +161,13 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/projects/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/employee.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/equivalents/all.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/employees/all.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_09_09_131722_create_equivalents_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Equivalent.php" />
         <option value="$PROJECT_DIR$/app/Models/Employee.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EquivalentController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php" />
+        <option value="$PROJECT_DIR$/app/Models/Equivalent.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/equivalents/add.blade.php" />
       </list>
     </option>
@@ -930,24 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.115385">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Equivalent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <marker date="1627788745520" expanded="true" signature="762:871" placeholder="select count..projects..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/employees/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.3493977">
@@ -987,18 +965,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.653846">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding>
-            <marker date="1627789832652" expanded="true" signature="210:264" placeholder="select sum(v..equivalents..." />
-            <marker date="1627789832652" expanded="true" signature="575:622" placeholder="select creat..equivalents..." />
-            <marker date="1627789832652" expanded="true" signature="941:1007" placeholder="select sum(b..projects..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EquivalentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.384615">
@@ -1009,10 +975,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <marker date="1627789832652" expanded="true" signature="210:264" placeholder="select sum(v..equivalents..." />
+            <marker date="1627789832652" expanded="true" signature="575:622" placeholder="select creat..equivalents..." />
+            <marker date="1627789832652" expanded="true" signature="941:1007" placeholder="select sum(b..projects..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/EmployeeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847">
+          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Equivalent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.23077">
+          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+          <folding>
+            <marker date="1627790342814" expanded="true" signature="762:871" placeholder="select count..projects..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/equivalents/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6304348">
-          <caret line="255" column="95" selection-start-line="255" selection-start-column="95" selection-end-line="255" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.7844203">
+          <caret line="263" column="28" selection-start-line="263" selection-start-column="28" selection-end-line="263" selection-end-column="28" />
           <folding>
             <element signature="e#5843#5976#0#HTML" expanded="false" />
             <element signature="e#5994#8636#0#HTML" expanded="false" />

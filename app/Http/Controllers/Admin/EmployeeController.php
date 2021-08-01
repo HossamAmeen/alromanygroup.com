@@ -32,21 +32,20 @@ class EmployeeController extends Controller
         $query .= "from employees e ";
 //        $query .= ", projects p ";
 
-        $query .= "right Join projects p ";
-        $query .= "on e.id = p.employee_id  ";
+//        $query .= "right Join projects p ";
+//        $query .= "on e.id = p.employee_id  ";
 
 //        $query .= "left Join equivalents eq ";
 //        $query .= "on e.id = eq.employee_id  ";
 
 
-        $query .= "where e.active = 1 and p.active = 1 ";
+        $query .= "where e.active = 1  ";
 
-        $query .= "GROUP BY e.id  ";
-        $query .= "order by e.name  ";
+//        $query .= "GROUP BY e.id  ";
+//        $query .= "order by e.name  ";
 
 
         $items = DB::select($query);
-
 
         Equivalent::add_total_equivalents($items);
 
